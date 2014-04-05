@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8504D56118E9B65400059303 /* DOPostStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56018E9B65400059303 /* DOPostStream.m */; };
+		8504D56718E9B71A00059303 /* DOPTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56418E9B71A00059303 /* DOPTimelineCell.m */; };
+		8504D56C18E9B77600059303 /* DOPTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56B18E9B77600059303 /* DOPTimelineViewController.m */; };
+		8504D57118E9B7D500059303 /* DOPostStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56F18E9B7D500059303 /* DOPostStreamTests.m */; };
+		8504D57218E9B7D500059303 /* DOPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D57018E9B7D500059303 /* DOPostTests.m */; };
+		8518E33C18EAB695001B3280 /* DOPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E33B18EAB695001B3280 /* DOPost.m */; };
+		8518E34318EAB6A6001B3280 /* DOPImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E33E18EAB6A6001B3280 /* DOPImageLoader.m */; };
+		8518E34418EAB6A6001B3280 /* DOPImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E34018EAB6A6001B3280 /* DOPImageProcessor.m */; };
+		8518E34518EAB6A6001B3280 /* DOPMemoryDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E34218EAB6A6001B3280 /* DOPMemoryDataLoader.m */; };
+		8518E34818EABFCA001B3280 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E34718EABFCA001B3280 /* QuartzCore.framework */; };
+		8518E34B18EAE5B5001B3280 /* DOPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E34A18EAE5B5001B3280 /* DOPhoto.m */; };
+		8518E35918EB3452001B3280 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E35818EB3452001B3280 /* UIView+AutoLayout.m */; };
+		8518E36618EB3D6C001B3280 /* DOPTimelineCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E36518EB3D6C001B3280 /* DOPTimelineCellHeader.m */; };
+		8518E37518EC05F6001B3280 /* DOPTimelineCellPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E37418EC05F6001B3280 /* DOPTimelineCellPhotos.m */; };
+		8518E38018ED4AE8001B3280 /* DOPTimelineCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E37F18ED4AE8001B3280 /* DOPTimelineCellLayout.m */; };
+		8518E38318ED8EA9001B3280 /* DOPTimelineCommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E38218ED8EA9001B3280 /* DOPTimelineCommentLabel.m */; };
+		8518E38618EDCD2B001B3280 /* DOPComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E38518EDCD2B001B3280 /* DOPComment.m */; };
+		8518E38918EE5E91001B3280 /* DOPLoremIpsumGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E38818EE5E91001B3280 /* DOPLoremIpsumGenerator.m */; };
+		85D324FF18E99B9B00AA73AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D324FE18E99B9B00AA73AF /* Foundation.framework */; };
+		85D3250D18E99B9B00AA73AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3250C18E99B9B00AA73AF /* XCTest.framework */; };
+		85D3250E18E99B9B00AA73AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D324FE18E99B9B00AA73AF /* Foundation.framework */; };
+		85D3251318E99B9B00AA73AF /* libDOPTimelineView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D324FB18E99B9B00AA73AF /* libDOPTimelineView.a */; };
+		85D3251918E99B9B00AA73AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85D3251718E99B9B00AA73AF /* InfoPlist.strings */; };
+		85D3251B18E99B9B00AA73AF /* DOPTimelineViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D3251A18E99B9B00AA73AF /* DOPTimelineViewTests.m */; };
+		85D3252518E99BB300AA73AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3252418E99BB300AA73AF /* UIKit.framework */; };
+		E50530964E1E4D13836ED819 /* libPods-DOPTimelineViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF48FEB7D24AF189D511F3 /* libPods-DOPTimelineViewTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85D3251118E99B9B00AA73AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85D324F318E99B9B00AA73AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85D324FA18E99B9B00AA73AF;
+			remoteInfo = DOPTimelineView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85D324F918E99B9B00AA73AF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		36CD594DFD03419880FB9397 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCF48FEB7D24AF189D511F3 /* libPods-DOPTimelineViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DOPTimelineViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8504D55F18E9B65400059303 /* DOPostStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPostStream.h; sourceTree = "<group>"; };
+		8504D56018E9B65400059303 /* DOPostStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostStream.m; sourceTree = "<group>"; };
+		8504D56318E9B71A00059303 /* DOPTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineCell.h; sourceTree = "<group>"; };
+		8504D56418E9B71A00059303 /* DOPTimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineCell.m; sourceTree = "<group>"; };
+		8504D56A18E9B77600059303 /* DOPTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineViewController.h; sourceTree = "<group>"; };
+		8504D56B18E9B77600059303 /* DOPTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineViewController.m; sourceTree = "<group>"; };
+		8504D56F18E9B7D500059303 /* DOPostStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostStreamTests.m; sourceTree = "<group>"; };
+		8504D57018E9B7D500059303 /* DOPostTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostTests.m; sourceTree = "<group>"; };
+		8518E33A18EAB695001B3280 /* DOPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPost.h; sourceTree = "<group>"; };
+		8518E33B18EAB695001B3280 /* DOPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPost.m; sourceTree = "<group>"; };
+		8518E33D18EAB6A6001B3280 /* DOPImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPImageLoader.h; sourceTree = "<group>"; };
+		8518E33E18EAB6A6001B3280 /* DOPImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPImageLoader.m; sourceTree = "<group>"; };
+		8518E33F18EAB6A6001B3280 /* DOPImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPImageProcessor.h; sourceTree = "<group>"; };
+		8518E34018EAB6A6001B3280 /* DOPImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPImageProcessor.m; sourceTree = "<group>"; };
+		8518E34118EAB6A6001B3280 /* DOPMemoryDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPMemoryDataLoader.h; sourceTree = "<group>"; };
+		8518E34218EAB6A6001B3280 /* DOPMemoryDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPMemoryDataLoader.m; sourceTree = "<group>"; };
+		8518E34718EABFCA001B3280 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8518E34918EAE5B5001B3280 /* DOPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPhoto.h; sourceTree = "<group>"; };
+		8518E34A18EAE5B5001B3280 /* DOPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPhoto.m; sourceTree = "<group>"; };
+		8518E35718EB3452001B3280 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		8518E35818EB3452001B3280 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		8518E36418EB3D6C001B3280 /* DOPTimelineCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineCellHeader.h; sourceTree = "<group>"; };
+		8518E36518EB3D6C001B3280 /* DOPTimelineCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineCellHeader.m; sourceTree = "<group>"; };
+		8518E37318EC05F6001B3280 /* DOPTimelineCellPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineCellPhotos.h; sourceTree = "<group>"; };
+		8518E37418EC05F6001B3280 /* DOPTimelineCellPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineCellPhotos.m; sourceTree = "<group>"; };
+		8518E37618EC117A001B3280 /* DOPTimelineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DOPTimelineImages.xcassets; sourceTree = "<group>"; };
+		8518E37718EC117A001B3280 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		8518E37E18ED4AE8001B3280 /* DOPTimelineCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineCellLayout.h; sourceTree = "<group>"; };
+		8518E37F18ED4AE8001B3280 /* DOPTimelineCellLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineCellLayout.m; sourceTree = "<group>"; };
+		8518E38118ED8EA9001B3280 /* DOPTimelineCommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineCommentLabel.h; sourceTree = "<group>"; };
+		8518E38218ED8EA9001B3280 /* DOPTimelineCommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineCommentLabel.m; sourceTree = "<group>"; };
+		8518E38418EDCD2B001B3280 /* DOPComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPComment.h; sourceTree = "<group>"; };
+		8518E38518EDCD2B001B3280 /* DOPComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPComment.m; sourceTree = "<group>"; };
+		8518E38718EE5E91001B3280 /* DOPLoremIpsumGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPLoremIpsumGenerator.h; sourceTree = "<group>"; };
+		8518E38818EE5E91001B3280 /* DOPLoremIpsumGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPLoremIpsumGenerator.m; sourceTree = "<group>"; };
+		85D324FB18E99B9B00AA73AF /* libDOPTimelineView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDOPTimelineView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D324FE18E99B9B00AA73AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		85D3250218E99B9B00AA73AF /* DOPTimelineView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DOPTimelineView-Prefix.pch"; sourceTree = "<group>"; };
+		85D3250B18E99B9B00AA73AF /* DOPTimelineViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOPTimelineViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D3250C18E99B9B00AA73AF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		85D3251618E99B9B00AA73AF /* DOPTimelineViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOPTimelineViewTests-Info.plist"; sourceTree = "<group>"; };
+		85D3251818E99B9B00AA73AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		85D3251A18E99B9B00AA73AF /* DOPTimelineViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineViewTests.m; sourceTree = "<group>"; };
+		85D3252418E99BB300AA73AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D478C45B51EC4D6CAE05AC7F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOPTimelineViewTests.xcconfig"; path = "Pods/Pods-DOPTimelineViewTests.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85D324F818E99B9B00AA73AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8518E34818EABFCA001B3280 /* QuartzCore.framework in Frameworks */,
+				85D3252518E99BB300AA73AF /* UIKit.framework in Frameworks */,
+				85D324FF18E99B9B00AA73AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D3250818E99B9B00AA73AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D3250D18E99B9B00AA73AF /* XCTest.framework in Frameworks */,
+				85D3250E18E99B9B00AA73AF /* Foundation.framework in Frameworks */,
+				85D3251318E99B9B00AA73AF /* libDOPTimelineView.a in Frameworks */,
+				E50530964E1E4D13836ED819 /* libPods-DOPTimelineViewTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8504D56218E9B6F500059303 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8518E33A18EAB695001B3280 /* DOPost.h */,
+				8518E33B18EAB695001B3280 /* DOPost.m */,
+				8518E34918EAE5B5001B3280 /* DOPhoto.h */,
+				8518E34A18EAE5B5001B3280 /* DOPhoto.m */,
+				8504D55F18E9B65400059303 /* DOPostStream.h */,
+				8504D56018E9B65400059303 /* DOPostStream.m */,
+				8518E38418EDCD2B001B3280 /* DOPComment.h */,
+				8518E38518EDCD2B001B3280 /* DOPComment.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8504D56918E9B75100059303 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8504D56318E9B71A00059303 /* DOPTimelineCell.h */,
+				8504D56418E9B71A00059303 /* DOPTimelineCell.m */,
+				8518E37E18ED4AE8001B3280 /* DOPTimelineCellLayout.h */,
+				8518E37F18ED4AE8001B3280 /* DOPTimelineCellLayout.m */,
+				8518E36418EB3D6C001B3280 /* DOPTimelineCellHeader.h */,
+				8518E36518EB3D6C001B3280 /* DOPTimelineCellHeader.m */,
+				8518E37318EC05F6001B3280 /* DOPTimelineCellPhotos.h */,
+				8518E37418EC05F6001B3280 /* DOPTimelineCellPhotos.m */,
+				8518E38118ED8EA9001B3280 /* DOPTimelineCommentLabel.h */,
+				8518E38218ED8EA9001B3280 /* DOPTimelineCommentLabel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8504D56D18E9B78F00059303 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8504D56A18E9B77600059303 /* DOPTimelineViewController.h */,
+				8504D56B18E9B77600059303 /* DOPTimelineViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8518E34618EAB6B0001B3280 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8518E33D18EAB6A6001B3280 /* DOPImageLoader.h */,
+				8518E33E18EAB6A6001B3280 /* DOPImageLoader.m */,
+				8518E33F18EAB6A6001B3280 /* DOPImageProcessor.h */,
+				8518E34018EAB6A6001B3280 /* DOPImageProcessor.m */,
+				8518E34118EAB6A6001B3280 /* DOPMemoryDataLoader.h */,
+				8518E34218EAB6A6001B3280 /* DOPMemoryDataLoader.m */,
+				8518E38718EE5E91001B3280 /* DOPLoremIpsumGenerator.h */,
+				8518E38818EE5E91001B3280 /* DOPLoremIpsumGenerator.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		8518E35618EB3452001B3280 /* UIView+AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8518E35718EB3452001B3280 /* UIView+AutoLayout.h */,
+				8518E35818EB3452001B3280 /* UIView+AutoLayout.m */,
+			);
+			path = "UIView+AutoLayout";
+			sourceTree = "<group>";
+		};
+		85D324F218E99B9B00AA73AF = {
+			isa = PBXGroup;
+			children = (
+				85D3250018E99B9B00AA73AF /* DOPTimelineView */,
+				85D3251418E99B9B00AA73AF /* DOPTimelineViewTests */,
+				85D324FD18E99B9B00AA73AF /* Frameworks */,
+				85D324FC18E99B9B00AA73AF /* Products */,
+				D478C45B51EC4D6CAE05AC7F /* Pods.xcconfig */,
+				D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		85D324FC18E99B9B00AA73AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85D324FB18E99B9B00AA73AF /* libDOPTimelineView.a */,
+				85D3250B18E99B9B00AA73AF /* DOPTimelineViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85D324FD18E99B9B00AA73AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8518E34718EABFCA001B3280 /* QuartzCore.framework */,
+				85D3252418E99BB300AA73AF /* UIKit.framework */,
+				85D324FE18E99B9B00AA73AF /* Foundation.framework */,
+				85D3250C18E99B9B00AA73AF /* XCTest.framework */,
+				4CCF48FEB7D24AF189D511F3 /* libPods-DOPTimelineViewTests.a */,
+				36CD594DFD03419880FB9397 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85D3250018E99B9B00AA73AF /* DOPTimelineView */ = {
+			isa = PBXGroup;
+			children = (
+				8518E37618EC117A001B3280 /* DOPTimelineImages.xcassets */,
+				8518E37718EC117A001B3280 /* main.storyboard */,
+				8518E35618EB3452001B3280 /* UIView+AutoLayout */,
+				8504D56D18E9B78F00059303 /* ViewControllers */,
+				8504D56918E9B75100059303 /* Views */,
+				8504D56218E9B6F500059303 /* Models */,
+				8518E34618EAB6B0001B3280 /* Utils */,
+				85D3250118E99B9B00AA73AF /* Supporting Files */,
+			);
+			path = DOPTimelineView;
+			sourceTree = "<group>";
+		};
+		85D3250118E99B9B00AA73AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85D3250218E99B9B00AA73AF /* DOPTimelineView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85D3251418E99B9B00AA73AF /* DOPTimelineViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				8504D56F18E9B7D500059303 /* DOPostStreamTests.m */,
+				8504D57018E9B7D500059303 /* DOPostTests.m */,
+				85D3251A18E99B9B00AA73AF /* DOPTimelineViewTests.m */,
+				85D3251518E99B9B00AA73AF /* Supporting Files */,
+			);
+			path = DOPTimelineViewTests;
+			sourceTree = "<group>";
+		};
+		85D3251518E99B9B00AA73AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85D3251618E99B9B00AA73AF /* DOPTimelineViewTests-Info.plist */,
+				85D3251718E99B9B00AA73AF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85D324FA18E99B9B00AA73AF /* DOPTimelineView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D3251E18E99B9B00AA73AF /* Build configuration list for PBXNativeTarget "DOPTimelineView" */;
+			buildPhases = (
+				C05749B700BA45B6B2406F79 /* Check Pods Manifest.lock */,
+				85D324F718E99B9B00AA73AF /* Sources */,
+				85D324F818E99B9B00AA73AF /* Frameworks */,
+				85D324F918E99B9B00AA73AF /* CopyFiles */,
+				F6CF3CF259C141B687E7C581 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DOPTimelineView;
+			productName = DOPTimelineView;
+			productReference = 85D324FB18E99B9B00AA73AF /* libDOPTimelineView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		85D3250A18E99B9B00AA73AF /* DOPTimelineViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D3252118E99B9B00AA73AF /* Build configuration list for PBXNativeTarget "DOPTimelineViewTests" */;
+			buildPhases = (
+				3E54413C26D04C33A0E2D243 /* Check Pods Manifest.lock */,
+				85D3250718E99B9B00AA73AF /* Sources */,
+				85D3250818E99B9B00AA73AF /* Frameworks */,
+				85D3250918E99B9B00AA73AF /* Resources */,
+				DDB4A4AE56FA453F9B11A214 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85D3251218E99B9B00AA73AF /* PBXTargetDependency */,
+			);
+			name = DOPTimelineViewTests;
+			productName = DOPTimelineViewTests;
+			productReference = 85D3250B18E99B9B00AA73AF /* DOPTimelineViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85D324F318E99B9B00AA73AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "DODOPIPE LIMITED";
+			};
+			buildConfigurationList = 85D324F618E99B9B00AA73AF /* Build configuration list for PBXProject "DOPTimelineView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 85D324F218E99B9B00AA73AF;
+			productRefGroup = 85D324FC18E99B9B00AA73AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85D324FA18E99B9B00AA73AF /* DOPTimelineView */,
+				85D3250A18E99B9B00AA73AF /* DOPTimelineViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85D3250918E99B9B00AA73AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D3251918E99B9B00AA73AF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E54413C26D04C33A0E2D243 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C05749B700BA45B6B2406F79 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDB4A4AE56FA453F9B11A214 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DOPTimelineViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6CF3CF259C141B687E7C581 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85D324F718E99B9B00AA73AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8518E34318EAB6A6001B3280 /* DOPImageLoader.m in Sources */,
+				8518E38318ED8EA9001B3280 /* DOPTimelineCommentLabel.m in Sources */,
+				8518E33C18EAB695001B3280 /* DOPost.m in Sources */,
+				8518E38018ED4AE8001B3280 /* DOPTimelineCellLayout.m in Sources */,
+				8518E34418EAB6A6001B3280 /* DOPImageProcessor.m in Sources */,
+				8518E38918EE5E91001B3280 /* DOPLoremIpsumGenerator.m in Sources */,
+				8518E34B18EAE5B5001B3280 /* DOPhoto.m in Sources */,
+				8504D56718E9B71A00059303 /* DOPTimelineCell.m in Sources */,
+				8518E37518EC05F6001B3280 /* DOPTimelineCellPhotos.m in Sources */,
+				8518E35918EB3452001B3280 /* UIView+AutoLayout.m in Sources */,
+				8518E38618EDCD2B001B3280 /* DOPComment.m in Sources */,
+				8504D56C18E9B77600059303 /* DOPTimelineViewController.m in Sources */,
+				8518E34518EAB6A6001B3280 /* DOPMemoryDataLoader.m in Sources */,
+				8504D56118E9B65400059303 /* DOPostStream.m in Sources */,
+				8518E36618EB3D6C001B3280 /* DOPTimelineCellHeader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D3250718E99B9B00AA73AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8504D57218E9B7D500059303 /* DOPostTests.m in Sources */,
+				8504D57118E9B7D500059303 /* DOPostStreamTests.m in Sources */,
+				85D3251B18E99B9B00AA73AF /* DOPTimelineViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85D3251218E99B9B00AA73AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85D324FA18E99B9B00AA73AF /* DOPTimelineView */;
+			targetProxy = 85D3251118E99B9B00AA73AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85D3251718E99B9B00AA73AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85D3251818E99B9B00AA73AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85D3251C18E99B9B00AA73AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		85D3251D18E99B9B00AA73AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85D3251F18E99B9B00AA73AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D478C45B51EC4D6CAE05AC7F /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/DOPTimelineView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		85D3252018E99B9B00AA73AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D478C45B51EC4D6CAE05AC7F /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/DOPTimelineView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		85D3252218E99B9B00AA73AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
+					armv6,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DOPTimelineViewTests/DOPTimelineViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		85D3252318E99B9B00AA73AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
+					armv6,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
+				INFOPLIST_FILE = "DOPTimelineViewTests/DOPTimelineViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85D324F618E99B9B00AA73AF /* Build configuration list for PBXProject "DOPTimelineView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D3251C18E99B9B00AA73AF /* Debug */,
+				85D3251D18E99B9B00AA73AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85D3251E18E99B9B00AA73AF /* Build configuration list for PBXNativeTarget "DOPTimelineView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D3251F18E99B9B00AA73AF /* Debug */,
+				85D3252018E99B9B00AA73AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85D3252118E99B9B00AA73AF /* Build configuration list for PBXNativeTarget "DOPTimelineViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D3252218E99B9B00AA73AF /* Debug */,
+				85D3252318E99B9B00AA73AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85D324F318E99B9B00AA73AF /* Project object */;
+}

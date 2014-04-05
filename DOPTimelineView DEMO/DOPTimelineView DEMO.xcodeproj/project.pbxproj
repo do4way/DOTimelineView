@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CC18EA582600059303 /* Foundation.framework */; };
+		8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CE18EA582600059303 /* CoreGraphics.framework */; };
+		8504D5D118EA582600059303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5D018EA582600059303 /* UIKit.framework */; };
+		8504D5D718EA582600059303 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8504D5D518EA582600059303 /* InfoPlist.strings */; };
+		8504D5D918EA582600059303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D5D818EA582600059303 /* main.m */; };
+		8504D5DD18EA582600059303 /* DOPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D5DC18EA582600059303 /* DOPAppDelegate.m */; };
+		8504D5DF18EA582600059303 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504D5DE18EA582600059303 /* Images.xcassets */; };
+		8504D5E618EA582600059303 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5E518EA582600059303 /* XCTest.framework */; };
+		8504D5E718EA582600059303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CC18EA582600059303 /* Foundation.framework */; };
+		8504D5E818EA582600059303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5D018EA582600059303 /* UIKit.framework */; };
+		8504D5F018EA582600059303 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8504D5EE18EA582600059303 /* InfoPlist.strings */; };
+		8504D5F218EA582600059303 /* DOPTimelineView_DEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D5F118EA582600059303 /* DOPTimelineView_DEMOTests.m */; };
+		8518E33018EAB041001B3280 /* libDOPTimelineView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E32F18EAB040001B3280 /* libDOPTimelineView.a */; };
+		8518E37A18EC1198001B3280 /* DOPTimelineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8518E37818EC1198001B3280 /* DOPTimelineImages.xcassets */; };
+		8518E37B18EC1198001B3280 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8518E37918EC1198001B3280 /* main.storyboard */; };
+		8518E37D18ED32E9001B3280 /* libPods-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8504D5E918EA582600059303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8504D5C118EA582600059303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8504D5C818EA582600059303;
+			remoteInfo = "DOPTimelineView DEMO";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8504D5C918EA582600059303 /* DOPTimelineView DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOPTimelineView DEMO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8504D5CC18EA582600059303 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8504D5CE18EA582600059303 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8504D5D018EA582600059303 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8504D5D418EA582600059303 /* DOPTimelineView DEMO-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOPTimelineView DEMO-Info.plist"; sourceTree = "<group>"; };
+		8504D5D618EA582600059303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8504D5D818EA582600059303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8504D5DA18EA582600059303 /* DOPTimelineView DEMO-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DOPTimelineView DEMO-Prefix.pch"; sourceTree = "<group>"; };
+		8504D5DB18EA582600059303 /* DOPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOPAppDelegate.h; sourceTree = "<group>"; };
+		8504D5DC18EA582600059303 /* DOPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPAppDelegate.m; sourceTree = "<group>"; };
+		8504D5DE18EA582600059303 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8504D5E418EA582600059303 /* DOPTimelineView DEMOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DOPTimelineView DEMOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8504D5E518EA582600059303 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8504D5ED18EA582600059303 /* DOPTimelineView DEMOTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOPTimelineView DEMOTests-Info.plist"; sourceTree = "<group>"; };
+		8504D5EF18EA582600059303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8504D5F118EA582600059303 /* DOPTimelineView_DEMOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineView_DEMOTests.m; sourceTree = "<group>"; };
+		8518E32F18EAB040001B3280 /* libDOPTimelineView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDOPTimelineView.a; path = "../Build/Products/Debug-iphoneos/libDOPTimelineView.a"; sourceTree = "<group>"; };
+		8518E37818EC1198001B3280 /* DOPTimelineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DOPTimelineImages.xcassets; sourceTree = "<group>"; };
+		8518E37918EC1198001B3280 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8504D5C618EA582600059303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8518E37D18ED32E9001B3280 /* libPods-SDWebImage.a in Frameworks */,
+				8518E33018EAB041001B3280 /* libDOPTimelineView.a in Frameworks */,
+				8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */,
+				8504D5D118EA582600059303 /* UIKit.framework in Frameworks */,
+				8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8504D5E118EA582600059303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8504D5E618EA582600059303 /* XCTest.framework in Frameworks */,
+				8504D5E818EA582600059303 /* UIKit.framework in Frameworks */,
+				8504D5E718EA582600059303 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8504D5C018EA582600059303 = {
+			isa = PBXGroup;
+			children = (
+				8504D5D218EA582600059303 /* DOPTimelineView DEMO */,
+				8504D5EB18EA582600059303 /* DOPTimelineView DEMOTests */,
+				8504D5CB18EA582600059303 /* Frameworks */,
+				8504D5CA18EA582600059303 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8504D5CA18EA582600059303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8504D5C918EA582600059303 /* DOPTimelineView DEMO.app */,
+				8504D5E418EA582600059303 /* DOPTimelineView DEMOTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8504D5CB18EA582600059303 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */,
+				8518E32F18EAB040001B3280 /* libDOPTimelineView.a */,
+				8504D5CC18EA582600059303 /* Foundation.framework */,
+				8504D5CE18EA582600059303 /* CoreGraphics.framework */,
+				8504D5D018EA582600059303 /* UIKit.framework */,
+				8504D5E518EA582600059303 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8504D5D218EA582600059303 /* DOPTimelineView DEMO */ = {
+			isa = PBXGroup;
+			children = (
+				8518E37818EC1198001B3280 /* DOPTimelineImages.xcassets */,
+				8518E37918EC1198001B3280 /* main.storyboard */,
+				8504D5DB18EA582600059303 /* DOPAppDelegate.h */,
+				8504D5DC18EA582600059303 /* DOPAppDelegate.m */,
+				8504D5DE18EA582600059303 /* Images.xcassets */,
+				8504D5D318EA582600059303 /* Supporting Files */,
+			);
+			path = "DOPTimelineView DEMO";
+			sourceTree = "<group>";
+		};
+		8504D5D318EA582600059303 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8504D5D418EA582600059303 /* DOPTimelineView DEMO-Info.plist */,
+				8504D5D518EA582600059303 /* InfoPlist.strings */,
+				8504D5D818EA582600059303 /* main.m */,
+				8504D5DA18EA582600059303 /* DOPTimelineView DEMO-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8504D5EB18EA582600059303 /* DOPTimelineView DEMOTests */ = {
+			isa = PBXGroup;
+			children = (
+				8504D5F118EA582600059303 /* DOPTimelineView_DEMOTests.m */,
+				8504D5EC18EA582600059303 /* Supporting Files */,
+			);
+			path = "DOPTimelineView DEMOTests";
+			sourceTree = "<group>";
+		};
+		8504D5EC18EA582600059303 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8504D5ED18EA582600059303 /* DOPTimelineView DEMOTests-Info.plist */,
+				8504D5EE18EA582600059303 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8504D5C818EA582600059303 /* DOPTimelineView DEMO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8504D5F518EA582600059303 /* Build configuration list for PBXNativeTarget "DOPTimelineView DEMO" */;
+			buildPhases = (
+				8504D5C518EA582600059303 /* Sources */,
+				8504D5C618EA582600059303 /* Frameworks */,
+				8504D5C718EA582600059303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DOPTimelineView DEMO";
+			productName = "DOPTimelineView DEMO";
+			productReference = 8504D5C918EA582600059303 /* DOPTimelineView DEMO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8504D5E318EA582600059303 /* DOPTimelineView DEMOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8504D5F818EA582600059303 /* Build configuration list for PBXNativeTarget "DOPTimelineView DEMOTests" */;
+			buildPhases = (
+				8504D5E018EA582600059303 /* Sources */,
+				8504D5E118EA582600059303 /* Frameworks */,
+				8504D5E218EA582600059303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8504D5EA18EA582600059303 /* PBXTargetDependency */,
+			);
+			name = "DOPTimelineView DEMOTests";
+			productName = "DOPTimelineView DEMOTests";
+			productReference = 8504D5E418EA582600059303 /* DOPTimelineView DEMOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8504D5C118EA582600059303 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DOP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "DODOPIPE LIMITED";
+				TargetAttributes = {
+					8504D5E318EA582600059303 = {
+						TestTargetID = 8504D5C818EA582600059303;
+					};
+				};
+			};
+			buildConfigurationList = 8504D5C418EA582600059303 /* Build configuration list for PBXProject "DOPTimelineView DEMO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8504D5C018EA582600059303;
+			productRefGroup = 8504D5CA18EA582600059303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8504D5C818EA582600059303 /* DOPTimelineView DEMO */,
+				8504D5E318EA582600059303 /* DOPTimelineView DEMOTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8504D5C718EA582600059303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8518E37A18EC1198001B3280 /* DOPTimelineImages.xcassets in Resources */,
+				8504D5D718EA582600059303 /* InfoPlist.strings in Resources */,
+				8504D5DF18EA582600059303 /* Images.xcassets in Resources */,
+				8518E37B18EC1198001B3280 /* main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8504D5E218EA582600059303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8504D5F018EA582600059303 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8504D5C518EA582600059303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8504D5DD18EA582600059303 /* DOPAppDelegate.m in Sources */,
+				8504D5D918EA582600059303 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8504D5E018EA582600059303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8504D5F218EA582600059303 /* DOPTimelineView_DEMOTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8504D5EA18EA582600059303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8504D5C818EA582600059303 /* DOPTimelineView DEMO */;
+			targetProxy = 8504D5E918EA582600059303 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8504D5D518EA582600059303 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8504D5D618EA582600059303 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8504D5EE18EA582600059303 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8504D5EF18EA582600059303 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8504D5F318EA582600059303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8504D5F418EA582600059303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8504D5F618EA582600059303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView DEMO/DOPTimelineView DEMO-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../DOPTimelineView,
+				);
+				INFOPLIST_FILE = "DOPTimelineView DEMO/DOPTimelineView DEMO-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DOPTimelineView-beezekhwgqrrstcpeydwtkmjvycv/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos",
+					"/Users/yongwei/workspaces/DOPTimelineView/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8504D5F718EA582600059303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView DEMO/DOPTimelineView DEMO-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../DOPTimelineView,
+				);
+				INFOPLIST_FILE = "DOPTimelineView DEMO/DOPTimelineView DEMO-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DOPTimelineView-beezekhwgqrrstcpeydwtkmjvycv/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos",
+					"/Users/yongwei/workspaces/DOPTimelineView/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8504D5F918EA582600059303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOPTimelineView DEMO.app/DOPTimelineView DEMO";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView DEMO/DOPTimelineView DEMO-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DOPTimelineView DEMOTests/DOPTimelineView DEMOTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8504D5FA18EA582600059303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOPTimelineView DEMO.app/DOPTimelineView DEMO";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DOPTimelineView DEMO/DOPTimelineView DEMO-Prefix.pch";
+				INFOPLIST_FILE = "DOPTimelineView DEMOTests/DOPTimelineView DEMOTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8504D5C418EA582600059303 /* Build configuration list for PBXProject "DOPTimelineView DEMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8504D5F318EA582600059303 /* Debug */,
+				8504D5F418EA582600059303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8504D5F518EA582600059303 /* Build configuration list for PBXNativeTarget "DOPTimelineView DEMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8504D5F618EA582600059303 /* Debug */,
+				8504D5F718EA582600059303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8504D5F818EA582600059303 /* Build configuration list for PBXNativeTarget "DOPTimelineView DEMOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8504D5F918EA582600059303 /* Debug */,
+				8504D5FA18EA582600059303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8504D5C118EA582600059303 /* Project object */;
+}
