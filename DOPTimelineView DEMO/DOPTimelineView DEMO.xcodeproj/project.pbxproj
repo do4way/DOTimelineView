@@ -10,7 +10,6 @@
 		8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CC18EA582600059303 /* Foundation.framework */; };
 		8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CE18EA582600059303 /* CoreGraphics.framework */; };
 		8504D5D118EA582600059303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5D018EA582600059303 /* UIKit.framework */; };
-		8504D5D718EA582600059303 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8504D5D518EA582600059303 /* InfoPlist.strings */; };
 		8504D5D918EA582600059303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D5D818EA582600059303 /* main.m */; };
 		8504D5DD18EA582600059303 /* DOPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D5DC18EA582600059303 /* DOPAppDelegate.m */; };
 		8504D5DF18EA582600059303 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504D5DE18EA582600059303 /* Images.xcassets */; };
@@ -20,9 +19,12 @@
 		8504D5F018EA582600059303 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8504D5EE18EA582600059303 /* InfoPlist.strings */; };
 		8504D5F218EA582600059303 /* DOPTimelineView_DEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D5F118EA582600059303 /* DOPTimelineView_DEMOTests.m */; };
 		8518E33018EAB041001B3280 /* libDOPTimelineView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E32F18EAB040001B3280 /* libDOPTimelineView.a */; };
-		8518E37A18EC1198001B3280 /* DOPTimelineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8518E37818EC1198001B3280 /* DOPTimelineImages.xcassets */; };
-		8518E37B18EC1198001B3280 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8518E37918EC1198001B3280 /* main.storyboard */; };
-		8518E37D18ED32E9001B3280 /* libPods-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */; };
+		8518E3DD18F154F1001B3280 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8518E3DB18F154F1001B3280 /* main.storyboard */; };
+		8518E3EF18F2D8A4001B3280 /* DOPTimelineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */; };
+		8518E43218F2FF46001B3280 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8518E43018F2FF46001B3280 /* Localizable.strings */; };
+		8518E43718F3339C001B3280 /* libPods-DOPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E43618F3339C001B3280 /* libPods-DOPhotoViewer.a */; };
+		8518E43918F3359E001B3280 /* libPods-DACircularProgress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E43818F3359E001B3280 /* libPods-DACircularProgress.a */; };
+		8518E43B18F335A8001B3280 /* libPods-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DD316B93F344DD4981253E5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4429974793274DB0AEE6B74C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8504D5C918EA582600059303 /* DOPTimelineView DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOPTimelineView DEMO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504D5CC18EA582600059303 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8504D5CE18EA582600059303 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8504D5D018EA582600059303 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8504D5D418EA582600059303 /* DOPTimelineView DEMO-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOPTimelineView DEMO-Info.plist"; sourceTree = "<group>"; };
-		8504D5D618EA582600059303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8504D5D818EA582600059303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8504D5DA18EA582600059303 /* DOPTimelineView DEMO-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DOPTimelineView DEMO-Prefix.pch"; sourceTree = "<group>"; };
 		8504D5DB18EA582600059303 /* DOPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOPAppDelegate.h; sourceTree = "<group>"; };
@@ -53,9 +56,17 @@
 		8504D5EF18EA582600059303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8504D5F118EA582600059303 /* DOPTimelineView_DEMOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineView_DEMOTests.m; sourceTree = "<group>"; };
 		8518E32F18EAB040001B3280 /* libDOPTimelineView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDOPTimelineView.a; path = "../Build/Products/Debug-iphoneos/libDOPTimelineView.a"; sourceTree = "<group>"; };
-		8518E37818EC1198001B3280 /* DOPTimelineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DOPTimelineImages.xcassets; sourceTree = "<group>"; };
-		8518E37918EC1198001B3280 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
-		8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
+		8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
+		8518E3DB18F154F1001B3280 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DOPTimelineImages.xcassets; sourceTree = "<group>"; };
+		8518E42918F2FE8B001B3280 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8518E43118F2FF46001B3280 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8518E43318F2FF4B001B3280 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8518E43418F3025C001B3280 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8518E43518F3025C001B3280 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8518E43618F3339C001B3280 /* libPods-DOPhotoViewer.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-DOPhotoViewer.a"; path = "../Pods/build/Debug-iphoneos/libPods-DOPhotoViewer.a"; sourceTree = "<group>"; };
+		8518E43818F3359E001B3280 /* libPods-DACircularProgress.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-DACircularProgress.a"; path = "../Pods/build/Debug-iphoneos/libPods-DACircularProgress.a"; sourceTree = "<group>"; };
+		8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8518E37D18ED32E9001B3280 /* libPods-SDWebImage.a in Frameworks */,
+				8518E43B18F335A8001B3280 /* libPods-SDWebImage.a in Frameworks */,
+				8518E43918F3359E001B3280 /* libPods-DACircularProgress.a in Frameworks */,
+				8518E43718F3339C001B3280 /* libPods-DOPhotoViewer.a in Frameworks */,
 				8518E33018EAB041001B3280 /* libDOPTimelineView.a in Frameworks */,
 				8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */,
 				8504D5D118EA582600059303 /* UIKit.framework in Frameworks */,
@@ -91,6 +104,7 @@
 				8504D5EB18EA582600059303 /* DOPTimelineView DEMOTests */,
 				8504D5CB18EA582600059303 /* Frameworks */,
 				8504D5CA18EA582600059303 /* Products */,
+				4429974793274DB0AEE6B74C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,12 +120,16 @@
 		8504D5CB18EA582600059303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */,
+				8518E43818F3359E001B3280 /* libPods-DACircularProgress.a */,
+				8518E43618F3339C001B3280 /* libPods-DOPhotoViewer.a */,
 				8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */,
 				8518E32F18EAB040001B3280 /* libDOPTimelineView.a */,
 				8504D5CC18EA582600059303 /* Foundation.framework */,
 				8504D5CE18EA582600059303 /* CoreGraphics.framework */,
 				8504D5D018EA582600059303 /* UIKit.framework */,
 				8504D5E518EA582600059303 /* XCTest.framework */,
+				1DD316B93F344DD4981253E5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,11 +137,12 @@
 		8504D5D218EA582600059303 /* DOPTimelineView DEMO */ = {
 			isa = PBXGroup;
 			children = (
-				8518E37818EC1198001B3280 /* DOPTimelineImages.xcassets */,
-				8518E37918EC1198001B3280 /* main.storyboard */,
+				8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */,
+				8518E3DB18F154F1001B3280 /* main.storyboard */,
 				8504D5DB18EA582600059303 /* DOPAppDelegate.h */,
 				8504D5DC18EA582600059303 /* DOPAppDelegate.m */,
 				8504D5DE18EA582600059303 /* Images.xcassets */,
+				8518E43018F2FF46001B3280 /* Localizable.strings */,
 				8504D5D318EA582600059303 /* Supporting Files */,
 			);
 			path = "DOPTimelineView DEMO";
@@ -133,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				8504D5D418EA582600059303 /* DOPTimelineView DEMO-Info.plist */,
-				8504D5D518EA582600059303 /* InfoPlist.strings */,
 				8504D5D818EA582600059303 /* main.m */,
 				8504D5DA18EA582600059303 /* DOPTimelineView DEMO-Prefix.pch */,
 			);
@@ -165,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8504D5F518EA582600059303 /* Build configuration list for PBXNativeTarget "DOPTimelineView DEMO" */;
 			buildPhases = (
+				18D2D708C9F24FFEAD99ADD6 /* Check Pods Manifest.lock */,
 				8504D5C518EA582600059303 /* Sources */,
 				8504D5C618EA582600059303 /* Frameworks */,
 				8504D5C718EA582600059303 /* Resources */,
+				083E126F4E7147859BD292B2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +237,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
+				"zh-Hans",
 			);
 			mainGroup = 8504D5C018EA582600059303;
 			productRefGroup = 8504D5CA18EA582600059303 /* Products */;
@@ -234,10 +256,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8518E37A18EC1198001B3280 /* DOPTimelineImages.xcassets in Resources */,
-				8504D5D718EA582600059303 /* InfoPlist.strings in Resources */,
+				8518E3DD18F154F1001B3280 /* main.storyboard in Resources */,
+				8518E43218F2FF46001B3280 /* Localizable.strings in Resources */,
+				8518E3EF18F2D8A4001B3280 /* DOPTimelineImages.xcassets in Resources */,
 				8504D5DF18EA582600059303 /* Images.xcassets in Resources */,
-				8518E37B18EC1198001B3280 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +272,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		083E126F4E7147859BD292B2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18D2D708C9F24FFEAD99ADD6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8504D5C518EA582600059303 /* Sources */ = {
@@ -280,20 +335,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8504D5D518EA582600059303 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8504D5D618EA582600059303 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		8504D5EE18EA582600059303 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8504D5EF18EA582600059303 /* en */,
+				8518E42918F2FE8B001B3280 /* ja */,
+				8518E43518F3025C001B3280 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8518E43018F2FF46001B3280 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8518E43118F2FF46001B3280 /* en */,
+				8518E43318F2FF4B001B3280 /* ja */,
+				8518E43418F3025C001B3280 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -383,6 +442,7 @@
 		};
 		8504D5F618EA582600059303 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4429974793274DB0AEE6B74C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -408,6 +468,7 @@
 		};
 		8504D5F718EA582600059303 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4429974793274DB0AEE6B74C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

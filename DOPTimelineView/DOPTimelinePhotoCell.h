@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DOPhoto;
 
-@interface DOPTimelineCellPhotos : UIView
+@interface DOPTimelinePhotoCell : UITableViewCell
 
-- (void) setPhotos:(NSArray *)photos withFrame:(CGRect) frame;
-- (void) prepareForReuse;
-
+- (void) setPhoto:(DOPhoto *)photo;
 
 @end

@@ -6,52 +6,79 @@
 //  Copyright (c) 2014年 DODOPIPE LIMITED. All rights reserved.
 //
 
+#import "UIView+AutoLayout.h"
 #import "DOPTimelineViewController.h"
 #import "DOPost.h"
 #import "DOPostStream.h"
 #import "DOPMemoryDataLoader.h"
 #import "DOPImageLoader.h"
-#import "DOPTimelineCell.h"
-#import "DOPTimelineCellLayout.h"
+#import "DOPTimelineHeaderCell.h"
+#import "DOPTimelinePhotoCell.h"
+#import "DOPTimelinePhotoGridCell.h"
+#import "DOPTimelineCaptionCell.h"
+#import "DOPTimelineLikedByCell.h"
+#import "DOPTimelineCommentCell.h"
+#import "DOPTimelineCommandsCell.h"
+#import "DOPTimelineAppearance.h"
 
-static NSString *const cellReuseIdentifier = @"DOPTimelineCell";
 
-@interface DOPTimelineViewController()
+/** ------------------------------------------
+ *    Cell Reuse Identifier
+ *  ------------------------------------------*/
 
-@property (nonatomic,strong) DOPostStream *postStream;
-@property (nonatomic,strong) NSMutableDictionary *offscreenCell;
+static NSString *const DOPTL_HEADER_CELL_REUSE_IDENTIFIER  = @"DOPTL_HEADER_CELL";
+static NSString *const DOPTL_PHOTO_CELL_REUSE_IDENTIFIER  = @"DOPTL_PHOTO_CELL";
+static NSString *const DOPTL_PHOTOGRID_CELL_REUSE_IDENTIFIER  = @"DOPTL_PHOTOGRID_CELL";
+static NSString *const DOPTL_CAPTION_CELL_REUSE_IDENTIFIER  = @"DOPTL_CAPTION_CELL";
+static NSString *const DOPTL_LIKEDBY_CELL_REUSE_IDENTIFIER  = @"DOPTL_LIKEDBY_CELL";
+static NSString *const DOPTL_COMMENT_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMENT_CELL";
+static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_CELL";
+
+
+@interface DOPTimelineViewController() <DOPostStreamDelegate>
+
+@property (nonatomic, strong) DOPostStream *postStream;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
 @implementation DOPTimelineViewController
 
-- (instancetype) init
-{
-    self = [super initWithStyle:UITableViewStylePlain];
-    self.offscreenCell = [[NSMutableDictionary alloc] initWithCapacity:3];
-    return self;
-}
 
-- (instancetype) initWithStyle:(UITableViewStyle)style
-{
-    return [self init];
-}
 
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerClass:[DOPTimelineCell class] forCellReuseIdentifier:@"DOPTimelineCell"];
+    
+    NSLog(@"==%@", self.spinner);
+    [self.spinner startAnimating];
+    [self.tableView registerClass:[DOPTimelineHeaderCell class]
+           forCellReuseIdentifier:DOPTL_HEADER_CELL_REUSE_IDENTIFIER];
+    [self.tableView registerClass:[DOPTimelinePhotoCell class]
+           forCellReuseIdentifier:DOPTL_PHOTO_CELL_REUSE_IDENTIFIER];
+    [self.tableView registerClass:[DOPTimelinePhotoGridCell class]
+           forCellReuseIdentifier:DOPTL_PHOTOGRID_CELL_REUSE_IDENTIFIER];
+    [self.tableView registerClass:[DOPTimelineCaptionCell class]
+           forCellReuseIdentifier:DOPTL_CAPTION_CELL_REUSE_IDENTIFIER];
+    [self.tableView registerClass:[DOPTimelineLikedByCell class]
+           forCellReuseIdentifier:DOPTL_LIKEDBY_CELL_REUSE_IDENTIFIER];
+    [self.tableView registerClass:[DOPTimelineCommentCell class]
+           forCellReuseIdentifier:DOPTL_COMMENT_CELL_REUSE_IDENTIFIER];
+    [self.tableView registerClass:[DOPTimelineCommandsCell class]
+           forCellReuseIdentifier:DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER];
     self.postStream = [self createPostStream];
     [self.postStream requestMorePosts];
-    NSLog(@"Now there are %ld photos in photostream",(long)[self.postStream count]);
     
 }
+
+
 
 #pragma mark - user interface interative
 
 
 - (IBAction)onPhotoThumbnailTapped:(UITapGestureRecognizer *)sender {
     
+    NSLog(@"tab");
     
 }
 
@@ -60,48 +87,99 @@ static NSString *const cellReuseIdentifier = @"DOPTimelineCell";
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.postStream count];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.postStream count];
+    return 6;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DOPost *post = [self.postStream postAtIndex:indexPath.row];
-    DOPTimelineCellLayout *cellLayout = [[DOPTimelineCellLayout alloc] initWithDOPost:post
-                                                                            cellWidth:CGRectGetWidth(tableView.bounds)];
+    DOPost *post = [self.postStream postAtIndex:indexPath.section];
+    DOPTimelineAppearance *appearance = [[DOPTimelineAppearance alloc] initWithDOPost:post];
+    return [appearance heightOfPartIndex:indexPath.row];
     
-    return [cellLayout height];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // NOTE for iOS 7.0.x ONLY, this bug has been fixed by Apple as of iOS 7.1:
-    // A constraint exception will be thrown if the estimated row height for an inserted row is greater
-    // than the actual height for that row. In order to work around this, we need to return the actual
-    // height for the the row when inserting into the table view - uncomment the below 3 lines of code.
-    // See: https://github.com/caoimghgin/TableViewCellWithAutoLayout/issues/6
-    //    if (self.isInsertingRow) {
-    //        return [self tableView:tableView heightForRowAtIndexPath:indexPath];
-    //    }
-    
-    return 300.0f;
-}
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString* cellIdendifier = @"DOPTimelineCell";
-    DOPTimelineCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdendifier
-                                                            forIndexPath:indexPath];
-    DOPost *post = [self.postStream postAtIndex:indexPath.row];
-    DOPTimelineCellLayout *layout = [[DOPTimelineCellLayout alloc] initWithDOPost:post
-                                                                            cellWidth:CGRectGetWidth(tableView.bounds)];
-    [cell setUserPost:post withLayout:layout];
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
+    DOPost *post = [self.postStream postAtIndex:indexPath.section];
+    
+    UITableViewCell *cell;
+    switch (indexPath.row) {
+        case 0: {
+            
+             DOPTimelineHeaderCell *header = [tableView dequeueReusableCellWithIdentifier:DOPTL_HEADER_CELL_REUSE_IDENTIFIER
+                                                                  forIndexPath:indexPath];
+            [header setHeaderWithAvatarUrl:post.avatarUrl
+                                userName:post.userName
+                             updateTime:post.timestampAsString];
+            cell = header;
+            break;
+        }
+        case 1: {
+            
+            NSInteger cnt = [post.photos count];
+            
+            if ( cnt == 1){
+                DOPTimelinePhotoCell *photo = [tableView dequeueReusableCellWithIdentifier:DOPTL_PHOTO_CELL_REUSE_IDENTIFIER
+                                                                          forIndexPath:indexPath];
+                [photo setPhoto:[post.photos firstObject]];
+                cell = photo;
+                
+            }else if ( cnt > 1) {
+               DOPTimelinePhotoGridCell *photos = [tableView dequeueReusableCellWithIdentifier:DOPTL_PHOTOGRID_CELL_REUSE_IDENTIFIER
+                                                                                  forIndexPath:indexPath];
+                [photos setPhotos:post.photos];
+                cell = photos;
+            }
+            break;
+            
+        }
+        case 2: {
+            
+            DOPTimelineCaptionCell *caption = [tableView dequeueReusableCellWithIdentifier:DOPTL_CAPTION_CELL_REUSE_IDENTIFIER
+                                                                      forIndexPath:indexPath];
+            [caption setCaption: post.caption];
+            cell = caption;
+
+            break;
+        }
+        case 3: {
+            DOPTimelineLikedByCell *likedBy = [tableView dequeueReusableCellWithIdentifier:DOPTL_LIKEDBY_CELL_REUSE_IDENTIFIER
+                                                                              forIndexPath:indexPath];
+
+            [likedBy setLikedBy:post.likedBy];
+            cell = likedBy;
+            break;
+        }
+            
+        case 4: {
+            DOPTimelineCommentCell *commentCell = [tableView dequeueReusableCellWithIdentifier:DOPTL_COMMENT_CELL_REUSE_IDENTIFIER
+                                                                              forIndexPath:indexPath];
+            if ([post.comments count] > 0) {
+                [commentCell setComment:[post.comments firstObject]];
+            }
+            cell = commentCell;
+            
+            break;
+        }
+            
+        case 5: {
+            
+            DOPTimelineCommandsCell *commandsCell = [tableView dequeueReusableCellWithIdentifier:DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER
+                                                                                    forIndexPath:indexPath];
+            [commandsCell setLikedByNum:post.numLikedBy commentedNum:post.numCommentedBy];
+            cell = commandsCell;
+            break;
+        }
+        
+        default:
+            break;
+    }
     
     return cell;
 }
@@ -121,28 +199,30 @@ static NSString *const cellReuseIdentifier = @"DOPTimelineCell";
     BOOL leachToBottom = contentOffsetWindow >= self.tableView.contentSize.height;
     if (!leachToBottom || self.postStream.loading) return;
     NSLog(@"request more photo");
+    [self.spinner startAnimating];
     [self.postStream requestMorePosts];
-    [self.tableView reloadData];
-    
 }
 
-- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+
+
+#pragma mark - post stream delegate
+- (void) didPostStreamLoaded
 {
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self.spinner stopAnimating];
     [self.tableView reloadData];
     
 }
-
 
 #pragma mark - Privates
 
 - (DOPostStream *) createPostStream
 {
     DOPMemoryDataLoader *loader = [DOPMemoryDataLoader sharedDataLoader];
-    return [[DOPostStream alloc] initWithUserId:@""
-                                     dataLoader:(id)loader];
+    DOPostStream *postStream = [[DOPostStream alloc] initWithUserId:@""
+                                                         dataLoader:(id)loader];
+    [postStream setStreamDelegate:self];
+    return postStream;
 }
-
 
 
 @end

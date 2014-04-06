@@ -72,9 +72,9 @@
         NSString *usrAvator = self.usersAvatar[arc4random() % [self.usersAvatar count]];
         NSInteger captionCnt = arc4random() % 20;
         NSString *caption = [self.wordGenerator words:captionCnt];
-        NSInteger numLikedBy = arc4random() % 102;
-        NSString *likedBy = numLikedBy ? [self.wordGenerator words:(arc4random() % 3 )+ 1 withSeparator:@","] : nil;
-        NSInteger numCommentedBy = arc4random() % 30;
+        NSInteger numLikedBy = arc4random() % 30;
+        NSString *likedBy = numLikedBy ? [self.wordGenerator words:(arc4random() % 10 )+ 1 withSeparator:@"、"] : nil;
+        NSInteger numCommentedBy = arc4random() % 6;
         NSArray *comments = [[NSArray alloc]init];
         if (numCommentedBy) {
             NSInteger cnt = arc4random() % 8 + 1;
@@ -102,7 +102,7 @@
                 ];
         [posts addObject: post];
     }
-    return posts;
+    return [posts copy];
 }
 
 -(NSArray *) generatePhotosData

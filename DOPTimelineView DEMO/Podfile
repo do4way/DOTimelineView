@@ -1,0 +1,5 @@
+platform :ios, '6.0'
+pod 'DOPhotoViewer','~> 0.0.1'
+
+xcodeproj 'DOPTimelineView DEMO'
+

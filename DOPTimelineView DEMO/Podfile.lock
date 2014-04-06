@@ -1,0 +1,18 @@
+PODS:
+  - DACircularProgress (2.1.0)
+  - DOPhotoViewer (0.0.1):
+    - DACircularProgress (~> 2.1.0)
+    - SDWebImage (~> 3.6)
+  - SDWebImage (3.6):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.6)
+
+DEPENDENCIES:
+  - DOPhotoViewer (~> 0.0.1)
+
+SPEC CHECKSUMS:
+  DACircularProgress: 8c8f20c8dffdd647fbf570ddecbc2b1b59da5888
+  DOPhotoViewer: 716f381c0a439d3981bde1d977cee51429de9958
+  SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
+
+COCOAPODS: 0.30.0

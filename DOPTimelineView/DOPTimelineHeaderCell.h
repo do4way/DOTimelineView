@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DOPTimelineCellHeader : UIView
+@interface DOPTimelineHeaderCell : UITableViewCell
 
-@property (nonatomic,strong) IBOutlet UIImageView *avatar;
-@property (nonatomic,strong) IBOutlet UILabel     *userName;
-@property (nonatomic,strong) IBOutlet UIImageView *timer;
-@property (nonatomic,strong) IBOutlet UILabel     *updateTime;
+
 
 - (void) setHeaderWithAvatarUrl:(NSURL *) url
                        userName:(NSString *) userName
