@@ -10,15 +10,6 @@
 #import "DOPTimelineAppearance.h"
 #import "DOPImageLoader.h"
 
-const static CGFloat AVATOR_MARGIN_TOP = 0.0f;
-const static CGFloat AVATOR_MARGIN_LEFT = 10.0f;
-const static CGFloat USERNAME_MARGIN_TOP = 10.0f;
-const static CGFloat USERNAME_MARGIN_LEFT = 55.0f;
-const static CGFloat TIMER_MARGIN_TOP = 13.5f;
-const static CGFloat TIMER_MARGIN_RIGHT = -2.0f;
-const static CGFloat UPDATETIME_MARGIN_TOP = 11.5f;
-const static CGFloat UPDATETIME_MARGIN_RIGHT = 15.0f;
-static NSString *timerIconName = @"timer";
 
 @interface DOPTimelineHeaderCell()
 

@@ -7,5 +7,5 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIkit.h>
-    #import "UIView+AutoLayout.h"
+    #import <UIView+AutoLayout.h>
 #endif

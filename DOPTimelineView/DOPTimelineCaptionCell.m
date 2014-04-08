@@ -7,7 +7,6 @@
 //
 
 #import "DOPTimelineCaptionCell.h"
-#import "UIView+AutoLayout.h"
 #import "DOPTimelineAppearance.h"
 
 @interface DOPTimelineCaptionCell ()

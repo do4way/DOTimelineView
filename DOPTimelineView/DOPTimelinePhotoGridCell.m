@@ -7,7 +7,6 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "UIView+AutoLayout.h"
 #import "DOPTimelinePhotoGridCell.h"
 #import "DOPTimelineAppearance.h"
 #import "DOPhoto.h"

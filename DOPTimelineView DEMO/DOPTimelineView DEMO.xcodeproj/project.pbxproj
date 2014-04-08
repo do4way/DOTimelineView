@@ -22,9 +22,8 @@
 		8518E3DD18F154F1001B3280 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8518E3DB18F154F1001B3280 /* main.storyboard */; };
 		8518E3EF18F2D8A4001B3280 /* DOPTimelineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */; };
 		8518E43218F2FF46001B3280 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8518E43018F2FF46001B3280 /* Localizable.strings */; };
-		8518E43718F3339C001B3280 /* libPods-DOPhotoViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E43618F3339C001B3280 /* libPods-DOPhotoViewer.a */; };
-		8518E43918F3359E001B3280 /* libPods-DACircularProgress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E43818F3359E001B3280 /* libPods-DACircularProgress.a */; };
 		8518E43B18F335A8001B3280 /* libPods-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */; };
+		857AFC0D18F40B100049CBE2 /* libPods-UIView+AutoLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 857AFC0C18F40B100049CBE2 /* libPods-UIView+AutoLayout.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		8504D5EF18EA582600059303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8504D5F118EA582600059303 /* DOPTimelineView_DEMOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineView_DEMOTests.m; sourceTree = "<group>"; };
 		8518E32F18EAB040001B3280 /* libDOPTimelineView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDOPTimelineView.a; path = "../Build/Products/Debug-iphoneos/libDOPTimelineView.a"; sourceTree = "<group>"; };
-		8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
 		8518E3DB18F154F1001B3280 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DOPTimelineImages.xcassets; sourceTree = "<group>"; };
 		8518E42918F2FE8B001B3280 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -64,9 +62,8 @@
 		8518E43318F2FF4B001B3280 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8518E43418F3025C001B3280 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8518E43518F3025C001B3280 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		8518E43618F3339C001B3280 /* libPods-DOPhotoViewer.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-DOPhotoViewer.a"; path = "../Pods/build/Debug-iphoneos/libPods-DOPhotoViewer.a"; sourceTree = "<group>"; };
-		8518E43818F3359E001B3280 /* libPods-DACircularProgress.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-DACircularProgress.a"; path = "../Pods/build/Debug-iphoneos/libPods-DACircularProgress.a"; sourceTree = "<group>"; };
-		8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
+		8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SDWebImage.a"; path = "../Pods/build/Debug-iphoneos/libPods-SDWebImage.a"; sourceTree = "<group>"; };
+		857AFC0C18F40B100049CBE2 /* libPods-UIView+AutoLayout.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-UIView+AutoLayout.a"; path = "../Pods/build/Debug-iphoneos/libPods-UIView+AutoLayout.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857AFC0D18F40B100049CBE2 /* libPods-UIView+AutoLayout.a in Frameworks */,
 				8518E43B18F335A8001B3280 /* libPods-SDWebImage.a in Frameworks */,
-				8518E43918F3359E001B3280 /* libPods-DACircularProgress.a in Frameworks */,
-				8518E43718F3339C001B3280 /* libPods-DOPhotoViewer.a in Frameworks */,
 				8518E33018EAB041001B3280 /* libDOPTimelineView.a in Frameworks */,
 				8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */,
 				8504D5D118EA582600059303 /* UIKit.framework in Frameworks */,
@@ -120,10 +116,8 @@
 		8504D5CB18EA582600059303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				857AFC0C18F40B100049CBE2 /* libPods-UIView+AutoLayout.a */,
 				8518E43A18F335A8001B3280 /* libPods-SDWebImage.a */,
-				8518E43818F3359E001B3280 /* libPods-DACircularProgress.a */,
-				8518E43618F3339C001B3280 /* libPods-DOPhotoViewer.a */,
-				8518E37C18ED32E9001B3280 /* libPods-SDWebImage.a */,
 				8518E32F18EAB040001B3280 /* libDOPTimelineView.a */,
 				8504D5CC18EA582600059303 /* Foundation.framework */,
 				8504D5CE18EA582600059303 /* CoreGraphics.framework */,

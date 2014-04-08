@@ -7,7 +7,6 @@
 //
 
 #import "DOPTimelineCommentCell.h"
-#import "UIView+AutoLayout.h"
 #import "DOPTimelineAppearance.h"
 #import "DOPComment.h"
 

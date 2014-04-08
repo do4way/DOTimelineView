@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 DODOPIPE LIMITED. All rights reserved.
 //
 
+#import <UIView+AutoLayout.h>
 #import "DOPTimelineLikedByCell.h"
-#import "UIView+AutoLayout.h"
 #import "DOPTimelineAppearance.h"
 
 @interface DOPTimelineLikedByCell ()

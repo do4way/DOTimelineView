@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DD6389A6F48491992DE96DB /* libPods-DOPTimelineViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6CB3FB234A45EEA713B720 /* libPods-DOPTimelineViewTests.a */; };
 		8504D56118E9B65400059303 /* DOPostStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56018E9B65400059303 /* DOPostStream.m */; };
 		8504D56C18E9B77600059303 /* DOPTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56B18E9B77600059303 /* DOPTimelineViewController.m */; };
 		8504D57118E9B7D500059303 /* DOPostStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56F18E9B7D500059303 /* DOPostStreamTests.m */; };
@@ -17,7 +18,6 @@
 		8518E34518EAB6A6001B3280 /* DOPMemoryDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E34218EAB6A6001B3280 /* DOPMemoryDataLoader.m */; };
 		8518E34818EABFCA001B3280 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E34718EABFCA001B3280 /* QuartzCore.framework */; };
 		8518E34B18EAE5B5001B3280 /* DOPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E34A18EAE5B5001B3280 /* DOPhoto.m */; };
-		8518E35918EB3452001B3280 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E35818EB3452001B3280 /* UIView+AutoLayout.m */; };
 		8518E36618EB3D6C001B3280 /* DOPTimelineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E36518EB3D6C001B3280 /* DOPTimelineHeaderCell.m */; };
 		8518E37518EC05F6001B3280 /* DOPTimelinePhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E37418EC05F6001B3280 /* DOPTimelinePhotoCell.m */; };
 		8518E38018ED4AE8001B3280 /* DOPTimelineAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E37F18ED4AE8001B3280 /* DOPTimelineAppearance.m */; };
@@ -36,7 +36,6 @@
 		85D3251918E99B9B00AA73AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85D3251718E99B9B00AA73AF /* InfoPlist.strings */; };
 		85D3251B18E99B9B00AA73AF /* DOPTimelineViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D3251A18E99B9B00AA73AF /* DOPTimelineViewTests.m */; };
 		85D3252518E99BB300AA73AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3252418E99BB300AA73AF /* UIKit.framework */; };
-		E50530964E1E4D13836ED819 /* libPods-DOPTimelineViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF48FEB7D24AF189D511F3 /* libPods-DOPTimelineViewTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		36CD594DFD03419880FB9397 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CCF48FEB7D24AF189D511F3 /* libPods-DOPTimelineViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DOPTimelineViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504D55F18E9B65400059303 /* DOPostStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPostStream.h; sourceTree = "<group>"; };
 		8504D56018E9B65400059303 /* DOPostStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostStream.m; sourceTree = "<group>"; };
 		8504D56A18E9B77600059303 /* DOPTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineViewController.h; sourceTree = "<group>"; };
@@ -81,8 +79,6 @@
 		8518E34718EABFCA001B3280 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8518E34918EAE5B5001B3280 /* DOPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPhoto.h; sourceTree = "<group>"; };
 		8518E34A18EAE5B5001B3280 /* DOPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPhoto.m; sourceTree = "<group>"; };
-		8518E35718EB3452001B3280 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
-		8518E35818EB3452001B3280 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		8518E36418EB3D6C001B3280 /* DOPTimelineHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineHeaderCell.h; sourceTree = "<group>"; };
 		8518E36518EB3D6C001B3280 /* DOPTimelineHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineHeaderCell.m; sourceTree = "<group>"; };
 		8518E37318EC05F6001B3280 /* DOPTimelinePhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelinePhotoCell.h; sourceTree = "<group>"; };
@@ -117,6 +113,7 @@
 		85D3251818E99B9B00AA73AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		85D3251A18E99B9B00AA73AF /* DOPTimelineViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineViewTests.m; sourceTree = "<group>"; };
 		85D3252418E99BB300AA73AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AD6CB3FB234A45EEA713B720 /* libPods-DOPTimelineViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DOPTimelineViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D478C45B51EC4D6CAE05AC7F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DOPTimelineViewTests.xcconfig"; path = "Pods/Pods-DOPTimelineViewTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +136,7 @@
 				85D3250D18E99B9B00AA73AF /* XCTest.framework in Frameworks */,
 				85D3250E18E99B9B00AA73AF /* Foundation.framework in Frameworks */,
 				85D3251318E99B9B00AA73AF /* libDOPTimelineView.a in Frameworks */,
-				E50530964E1E4D13836ED819 /* libPods-DOPTimelineViewTests.a in Frameworks */,
+				1DD6389A6F48491992DE96DB /* libPods-DOPTimelineViewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,15 +205,6 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		8518E35618EB3452001B3280 /* UIView+AutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				8518E35718EB3452001B3280 /* UIView+AutoLayout.h */,
-				8518E35818EB3452001B3280 /* UIView+AutoLayout.m */,
-			);
-			path = "UIView+AutoLayout";
-			sourceTree = "<group>";
-		};
 		8518E3F218F2F6AD001B3280 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,8 +241,8 @@
 				85D3252418E99BB300AA73AF /* UIKit.framework */,
 				85D324FE18E99B9B00AA73AF /* Foundation.framework */,
 				85D3250C18E99B9B00AA73AF /* XCTest.framework */,
-				4CCF48FEB7D24AF189D511F3 /* libPods-DOPTimelineViewTests.a */,
 				36CD594DFD03419880FB9397 /* libPods.a */,
+				AD6CB3FB234A45EEA713B720 /* libPods-DOPTimelineViewTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,7 +253,6 @@
 				8518E3F218F2F6AD001B3280 /* en.lproj */,
 				8518E37718EC117A001B3280 /* main.storyboard */,
 				8518E3D618F137A8001B3280 /* DOPTimelineImages.xcassets */,
-				8518E35618EB3452001B3280 /* UIView+AutoLayout */,
 				8504D56D18E9B78F00059303 /* ViewControllers */,
 				8504D56918E9B75100059303 /* Views */,
 				8504D56218E9B6F500059303 /* Models */,
@@ -465,7 +452,6 @@
 				8518E34B18EAE5B5001B3280 /* DOPhoto.m in Sources */,
 				8518E37518EC05F6001B3280 /* DOPTimelinePhotoCell.m in Sources */,
 				8518E3E418F23E2D001B3280 /* DOPTimelineCaptionCell.m in Sources */,
-				8518E35918EB3452001B3280 /* UIView+AutoLayout.m in Sources */,
 				8518E38618EDCD2B001B3280 /* DOPComment.m in Sources */,
 				8504D56C18E9B77600059303 /* DOPTimelineViewController.m in Sources */,
 				8518E34518EAB6A6001B3280 /* DOPMemoryDataLoader.m in Sources */,
@@ -594,7 +580,10 @@
 				DSTROOT = /tmp/DOPTimelineView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -607,7 +596,10 @@
 				DSTROOT = /tmp/DOPTimelineView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
