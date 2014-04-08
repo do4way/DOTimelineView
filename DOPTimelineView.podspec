@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "SDWebImage",         "~> 3.6"
-  s.dependency "UIView+AutoLayout",  "~> 0.4.0"
+  s.dependency "UIView+AutoLayout",  "~> 1.3.0"
 
 end
