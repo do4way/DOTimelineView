@@ -15,20 +15,21 @@ Pod::Spec.new do |s|
   # s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
 
   s.license      = "MIT"
-  s.author             = { "Yongwei" => "yongwei.dou@gmail.com" }
+  s.author       = { "Yongwei" => "yongwei.dou@gmail.com" }
 
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/do4way/DOTimelineView.git", :tag => "v0.0.1" }
 
   s.source_files  = "DOPTimelineView", "DOPTinelineVIew/**/*.{h,m}"
   s.exclude_files = "DOPTimelineView/{Exclude,Resources}"
-  s.resources = "DOPTimelineView/Resources"
+  s.resources = "DOPTimelineView/Resources/*"
 
   # s.public_header_files = "Classes/**/*.h"
 
   s.requires_arc = true
 
+  s.prefix_header_file = "DOPTimelineView/DOPTimelineView-Prefix.pch"
+  s.dependency "UIView\+AutoLayout",  "~> 1.3.0"
   s.dependency "SDWebImage",         "~> 3.6"
-  s.dependency "UIView+AutoLayout",  "~> 1.3.0"
 
 end
