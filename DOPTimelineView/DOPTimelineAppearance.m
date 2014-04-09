@@ -97,6 +97,10 @@ CGFloat  const DOPTL_COMMAND_LIKED_ICON_MARGIN_RELATED_RIGHT = -5.0f;
 CGFloat  const DOPTL_COMMAND_LIKED_ICON_WIDTH      = 13.0f;
 CGFloat  const DOPTL_COMMAND_LIKED_ICON_HEIGHT     = 12.0f;
 
+/** ----------------------------------------
+ *    Localizable table name
+ *  ----------------------------------------*/
+NSString *const DOPTL_LOCALIZABLE_STRING_TABLE_NAME = @"DOPTimeline";
 
 @implementation UIColor(DOPTimeline)
 
@@ -225,6 +229,25 @@ CGFloat  const DOPTL_COMMAND_LIKED_ICON_HEIGHT     = 12.0f;
 + (UIImage *) commentIcon
 {
     return [UIImage imageNamed:@"commentIcon"];
+}
+
+@end
+
+@implementation DOPTLocalizableString
+
++ (NSString *)likeBtnText
+{
+    return NSLocalizedStringFromTable(@"  Like",DOPTL_LOCALIZABLE_STRING_TABLE_NAME,nil);
+}
+
++ (NSString *)likeBtnEnabledText
+{
+    return NSLocalizedStringFromTable(@"  Liked", DOPTL_LOCALIZABLE_STRING_TABLE_NAME, nil);
+}
+
++ (NSString *)commentBtnText
+{
+    return NSLocalizedStringFromTable(@"  Comment", DOPTL_LOCALIZABLE_STRING_TABLE_NAME, nil);
 }
 
 @end

@@ -27,6 +27,7 @@
                reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    NSLog(@"head cell init");
     if (self) {
         self.avatar = [UIImageView newAutoLayoutView];
         [self.avatar setClipsToBounds:YES];
@@ -63,6 +64,7 @@
 {
     [super updateConstraints];
     
+    NSLog(@"update head cell constraints");
     if (self.didSetupConstraints)
         return;
     

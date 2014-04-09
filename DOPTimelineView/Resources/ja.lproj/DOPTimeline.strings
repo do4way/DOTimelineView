@@ -5,6 +5,6 @@
   Created by Yongwei Dou on 2014/04/08.
   Copyright (c) 2014年 DODOPIPE LIMITED. All rights reserved.
 */
-"Like" = "  いいね！   ";
-"Liked" = "  いいね！済 ";
-"Comment" = "  コメント";
+"  Like"    = "  いいね！   ";
+"  Liked"   = "  いいね！済 ";
+"  Comment" = "  コメント";

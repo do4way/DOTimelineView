@@ -51,25 +51,14 @@
 - (void) requestMorePosts
 {
     self.loading = YES;
-    dispatch_queue_t dataRequestQueue = dispatch_queue_create("com.dodopipe.doptimeline.post.requester",Nil);
+    //dispatch_queue_t dataRequestQueue = dispatch_queue_create("com.dodopipe.doptimeline.post.requester",Nil);
     
-    dispatch_async(dataRequestQueue, ^{
-        NSArray *newPosts = [self.dataLoader loadPostsWithId:self.userId
-                                                      pageNo:++self.currentPageNo
-                                                    pageSize:self.pageSize];
-        NSMutableArray *array = [NSMutableArray arrayWithArray:self.crtPosts];
-        for (DOPost *post in newPosts) {
-            [array addObject:post];
-        }
-        _crtPosts = array;
-        self.loading = NO;
-        
-        dispatch_async(dispatch_get_main_queue() , ^{
-            
-            [self.streamDelegate didPostStreamLoaded];
-            
-        });
-    });
+    [self performSelector:@selector(didRequestMorePosts) withObject:self afterDelay:1.0];
+    /*dispatch_async(dataRequestQueue, ^{
+        self.loading = YES;
+        NSLog(@"requestMorePosts");
+
+    });*/
 }
 
 - (void) clearData
@@ -90,8 +79,13 @@
     }
     _crtPosts = array;
     self.loading = NO;
+    NSLog(@"GET data");
     
-    [self.streamDelegate didPostStreamLoaded];
+    dispatch_async(dispatch_get_main_queue() , ^{
+        
+        [self.streamDelegate didPostStreamLoaded];
+        
+    });
 }
 
 

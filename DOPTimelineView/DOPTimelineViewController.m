@@ -38,18 +38,42 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
 @interface DOPTimelineViewController() <DOPostStreamDelegate>
 
 @property (nonatomic, strong) DOPostStream *postStream;
-@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
 @implementation DOPTimelineViewController
 
+- (instancetype) initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        self.tableView.allowsSelection = NO;
+    }
+    return self;
+}
 
+- (instancetype)init
+{
+    return [self initWithStyle:UITableViewStylePlain];
+}
+
+- (void) loadView
+{
+    [super loadView];
+    self.spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.spinner.translatesAutoresizingMaskIntoConstraints = NO;
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    [footerView addSubview:self.spinner];
+    [self.tableView setTableFooterView:footerView];
+    [self.spinner autoCenterInSuperview];
+}
 
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    
+    NSLog(@"view loaded");
     NSLog(@"==%@", self.spinner);
     [self.spinner startAnimating];
     [self.tableView registerClass:[DOPTimelineHeaderCell class]
@@ -71,7 +95,18 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
     
 }
 
-
+- (void) updateViewConstraints
+{
+    [super updateViewConstraints];
+    //[view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0.0];
+    //[view autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0.0];
+    //[view autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0.0];
+    //[view autoSetDimension:ALDimensionHeight toSize:40.0f];
+    
+    //[self.tableView updateConstraints];
+    //[self.spinner autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    //[self.spinner autoAlignAxisToSuperviewAxis:ALAxisVertical];
+}
 
 #pragma mark - user interface interative
 
@@ -210,6 +245,8 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
 {
     [self.spinner stopAnimating];
     [self.tableView reloadData];
+    [self.tableView setNeedsUpdateConstraints];
+    [self.tableView updateConstraintsIfNeeded];
     
 }
 

@@ -97,7 +97,10 @@ extern CGFloat  const DOPTL_COMMAND_LIKED_ICON_MARGIN_RELATED_RIGHT;
 extern CGFloat  const DOPTL_COMMAND_LIKED_ICON_WIDTH;
 extern CGFloat  const DOPTL_COMMAND_LIKED_ICON_HEIGHT;
 
-
+/** ----------------------------------------
+ *    Localizable table name
+ *  ----------------------------------------*/
+extern NSString *const DOPTL_LOCALIZABLE_STRING_TABLE_NAME;
 
 
 
@@ -139,6 +142,13 @@ extern CGFloat  const DOPTL_COMMAND_LIKED_ICON_HEIGHT;
 
 @end
 
+@interface DOPTLocalizableString : NSObject
+
++ (NSString*) likeBtnText;
++ (NSString*) likeBtnEnabledText;
++ (NSString*) commentBtnText;
+
+@end
 
 @interface DOPTimelineAppearance : NSObject
 

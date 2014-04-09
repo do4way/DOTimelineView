@@ -18,8 +18,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"main" bundle:nil];
-    UIViewController *mainViewController = [mainStory instantiateInitialViewController];
+    //UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"main" bundle:nil];
+    //UIViewController *mainViewController = [mainStory instantiateInitialViewController];
+    DOPTimelineViewController *mainViewController = [[DOPTimelineViewController alloc]init];
     //UIViewController *mainViewController = [[DOPTimelineViewController alloc] init];
     self.window.rootViewController = mainViewController;
     return YES;
