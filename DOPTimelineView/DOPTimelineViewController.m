@@ -20,6 +20,7 @@
 #import "DOPTimelineCommentCell.h"
 #import "DOPTimelineCommandsCell.h"
 #import "DOPTimelineAppearance.h"
+#import "DOPTimelineProtocols.h"
 
 
 /** ------------------------------------------
@@ -162,12 +163,14 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
             if ( cnt == 1){
                 DOPTimelinePhotoCell *photo = [tableView dequeueReusableCellWithIdentifier:DOPTL_PHOTO_CELL_REUSE_IDENTIFIER
                                                                           forIndexPath:indexPath];
+                [photo setGestureHandler:self.gestureHandler];
                 [photo setPhoto:[post.photos firstObject]];
                 cell = photo;
                 
             }else if ( cnt > 1) {
                DOPTimelinePhotoGridCell *photos = [tableView dequeueReusableCellWithIdentifier:DOPTL_PHOTOGRID_CELL_REUSE_IDENTIFIER
                                                                                   forIndexPath:indexPath];
+                [photos setGestureHandler:self.gestureHandler];
                 [photos setPhotos:post.photos];
                 cell = photos;
             }
@@ -254,9 +257,11 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
 
 - (DOPostStream *) createPostStream
 {
-    DOPMemoryDataLoader *loader = [DOPMemoryDataLoader sharedDataLoader];
+    id<DOPostsLoaderDelegate> loader = self.dataLoader;
+    if ( !loader )
+        loader = (id)[DOPMemoryDataLoader sharedDataLoader];
     DOPostStream *postStream = [[DOPostStream alloc] initWithUserId:@""
-                                                         dataLoader:(id)loader];
+                                                         dataLoader:loader];
     [postStream setStreamDelegate:self];
     return postStream;
 }

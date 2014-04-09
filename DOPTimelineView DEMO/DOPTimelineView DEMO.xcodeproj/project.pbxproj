@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426006827CCA4BB2B87B6D5E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD316B93F344DD4981253E5 /* libPods.a */; };
 		8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CC18EA582600059303 /* Foundation.framework */; };
 		8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CE18EA582600059303 /* CoreGraphics.framework */; };
 		8504D5D118EA582600059303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5D018EA582600059303 /* UIKit.framework */; };
@@ -21,8 +22,9 @@
 		8518E3EF18F2D8A4001B3280 /* DOPTimelineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */; };
 		8542C7DD18F4317B00ACA608 /* DOPTimeline.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8542C7DC18F4317B00ACA608 /* DOPTimeline.strings */; };
 		8542C7E518F4329F00ACA608 /* libDOPTimelineView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8518E32F18EAB040001B3280 /* libDOPTimelineView.a */; };
-		8542C7E718F4336400ACA608 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8542C7E618F4336400ACA608 /* main.storyboard */; };
 		8542C7E918F439AB00ACA608 /* DOPTimeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8542C7E818F439AB00ACA608 /* DOPTimeline.storyboard */; };
+		8542C7ED18F504E100ACA608 /* DOPTestTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542C7EC18F504E100ACA608 /* DOPTestTimelineViewController.m */; };
+		8542C7EF18F5218B00ACA608 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8542C7EE18F5218B00ACA608 /* main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +59,13 @@
 		8518E3EE18F2D8A4001B3280 /* DOPTimelineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DOPTimelineImages.xcassets; sourceTree = "<group>"; };
 		8518E42918F2FE8B001B3280 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8518E43518F3025C001B3280 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		8542C7D918F4317B00ACA608 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = Resources/en.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
-		8542C7DA18F4317B00ACA608 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file; name = ja; path = Resources/ja.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
-		8542C7DB18F4317B00ACA608 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "Resources/zh-Hans.lproj/DOPTimeline.strings"; sourceTree = "<group>"; };
-		8542C7E618F4336400ACA608 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		8542C7D918F4317B00ACA608 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
+		8542C7DA18F4317B00ACA608 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
+		8542C7DB18F4317B00ACA608 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resources/zh-Hans.lproj/DOPTimeline.strings"; sourceTree = "<group>"; };
 		8542C7E818F439AB00ACA608 /* DOPTimeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DOPTimeline.storyboard; sourceTree = "<group>"; };
+		8542C7EB18F504E100ACA608 /* DOPTestTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTestTimelineViewController.h; sourceTree = "<group>"; };
+		8542C7EC18F504E100ACA608 /* DOPTestTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTestTimelineViewController.m; sourceTree = "<group>"; };
+		8542C7EE18F5218B00ACA608 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */,
 				8504D5D118EA582600059303 /* UIKit.framework in Frameworks */,
 				8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */,
+				426006827CCA4BB2B87B6D5E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +134,9 @@
 				8504D5DC18EA582600059303 /* DOPAppDelegate.m */,
 				8504D5DE18EA582600059303 /* Images.xcassets */,
 				8504D5D318EA582600059303 /* Supporting Files */,
-				8542C7E618F4336400ACA608 /* main.storyboard */,
+				8542C7EB18F504E100ACA608 /* DOPTestTimelineViewController.h */,
+				8542C7EC18F504E100ACA608 /* DOPTestTimelineViewController.m */,
+				8542C7EE18F5218B00ACA608 /* main.storyboard */,
 			);
 			path = "DOPTimelineView DEMO";
 			sourceTree = "<group>";
@@ -245,7 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8542C7E718F4336400ACA608 /* main.storyboard in Resources */,
+				8542C7EF18F5218B00ACA608 /* main.storyboard in Resources */,
 				8542C7DD18F4317B00ACA608 /* DOPTimeline.strings in Resources */,
 				8518E3EF18F2D8A4001B3280 /* DOPTimelineImages.xcassets in Resources */,
 				8504D5DF18EA582600059303 /* Images.xcassets in Resources */,
@@ -302,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8504D5DD18EA582600059303 /* DOPAppDelegate.m in Sources */,
+				8542C7ED18F504E100ACA608 /* DOPTestTimelineViewController.m in Sources */,
 				8504D5D918EA582600059303 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

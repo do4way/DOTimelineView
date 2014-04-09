@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class DOPost;
+@protocol DOPostsLoaderDelegate;
 
 @protocol DOPostStreamDelegate <NSObject>
 
@@ -15,13 +16,7 @@
 
 @end
 
-@protocol DOPostsLoaderDelegate <NSObject>
 
-- (NSArray *) loadPostsWithId:(NSString*)gid
-                       pageNo:(NSInteger)pageNo
-                     pageSize:(NSInteger)pageSize;
-
-@end
 
 @interface DOPostStream : NSObject
 

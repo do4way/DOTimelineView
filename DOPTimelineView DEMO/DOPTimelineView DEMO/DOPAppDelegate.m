@@ -8,6 +8,7 @@
 
 #import "DOPAppDelegate.h"
 #import "DOPTimelineViewController.h"
+#import "DOPTestTimelineViewController.h"
 
 @implementation DOPAppDelegate
 
@@ -18,9 +19,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    //UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"main" bundle:nil];
-    //UIViewController *mainViewController = [mainStory instantiateInitialViewController];
-    DOPTimelineViewController *mainViewController = [[DOPTimelineViewController alloc]init];
+    UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"main" bundle:nil];
+    UIViewController *mainViewController = [mainStory instantiateInitialViewController];
+    //DOPTestTimelineViewController *mainViewController = [[DOPTestTimelineViewController alloc]init];
     //UIViewController *mainViewController = [[DOPTimelineViewController alloc] init];
     self.window.rootViewController = mainViewController;
     return YES;

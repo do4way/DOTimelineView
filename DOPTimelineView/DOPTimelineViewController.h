@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol DOPostsLoaderDelegate;
+@protocol DOPTimelineGestureHandler;
 
 @interface DOPTimelineViewController : UITableViewController
+
+@property (nonatomic, weak) id<DOPostsLoaderDelegate> dataLoader;
+@property (nonatomic, weak) id<DOPTimelineGestureHandler> gestureHandler;
 
 @end

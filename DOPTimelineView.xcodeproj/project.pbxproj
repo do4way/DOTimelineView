@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1DD6389A6F48491992DE96DB /* libPods-DOPTimelineViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6CB3FB234A45EEA713B720 /* libPods-DOPTimelineViewTests.a */; };
-		74B7CBB72FD04748BE21B488 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CD594DFD03419880FB9397 /* libPods.a */; };
 		8504D56118E9B65400059303 /* DOPostStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56018E9B65400059303 /* DOPostStream.m */; };
 		8504D56C18E9B77600059303 /* DOPTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56B18E9B77600059303 /* DOPTimelineViewController.m */; };
 		8504D57118E9B7D500059303 /* DOPostStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504D56F18E9B7D500059303 /* DOPostStreamTests.m */; };
@@ -104,6 +103,7 @@
 		8542C7D618F42E3D00ACA608 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
 		8542C7D718F42E4100ACA608 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
 		8542C7D818F42E4300ACA608 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resources/zh-Hans.lproj/DOPTimeline.strings"; sourceTree = "<group>"; };
+		8542C7EA18F4F22800ACA608 /* DOPTimelineProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineProtocols.h; sourceTree = "<group>"; };
 		85D324FB18E99B9B00AA73AF /* libDOPTimelineView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDOPTimelineView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D324FE18E99B9B00AA73AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85D3250218E99B9B00AA73AF /* DOPTimelineView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DOPTimelineView-Prefix.pch"; sourceTree = "<group>"; };
@@ -126,7 +126,6 @@
 				8518E34818EABFCA001B3280 /* QuartzCore.framework in Frameworks */,
 				85D3252518E99BB300AA73AF /* UIKit.framework in Frameworks */,
 				85D324FF18E99B9B00AA73AF /* Foundation.framework in Frameworks */,
-				74B7CBB72FD04748BE21B488 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +247,7 @@
 				8504D56218E9B6F500059303 /* Models */,
 				8518E34618EAB6B0001B3280 /* Utils */,
 				85D3250118E99B9B00AA73AF /* Supporting Files */,
+				8542C7EA18F4F22800ACA608 /* DOPTimelineProtocols.h */,
 			);
 			path = DOPTimelineView;
 			sourceTree = "<group>";

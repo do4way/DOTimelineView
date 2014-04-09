@@ -9,11 +9,12 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DOPTimelinePhotoCell.h"
 #import "DOPTimelineAppearance.h"
+#import "DOPTimelineProtocols.h"
 #import "DOPhoto.h"
 
 static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 
-@interface DOPTimelinePhotoCell()
+@interface DOPTimelinePhotoCell() 
 
 @property (nonatomic,strong) DOPhoto *photo;
 @property (nonatomic,strong) UIImageView *photoView;
@@ -31,6 +32,11 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
         [self.contentView addSubview:self.photoView];
         [self.photoView setClipsToBounds:YES];
         [self.photoView setContentMode:UIViewContentModeScaleAspectFill];
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapGesture:)];
+        
+        [tapGesture setNumberOfTapsRequired:2];
+        [tapGesture setDelegate:self];
+        [self addGestureRecognizer:tapGesture];
     }
     return self;
     
@@ -59,5 +65,11 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
     [self.photoView setImageWithURL:_photo.thumbUrl placeholderImage:[UIImage imageNamed:PHOTO_PLACEHOLDER]];
 }
 
+- (void) onTapGesture:(UIGestureRecognizer *) gesture
+{
+   if ( self.gestureHandler && gesture.state == UIGestureRecognizerStateEnded)
+       [self.gestureHandler onPhotosDoubleTapped:[NSArray arrayWithObject:self.photo.url] startAt:0];
+    
+}
 
 @end

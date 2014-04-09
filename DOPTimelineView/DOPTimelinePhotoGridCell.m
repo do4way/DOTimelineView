@@ -9,6 +9,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DOPTimelinePhotoGridCell.h"
 #import "DOPTimelineAppearance.h"
+#import "DOPTimelineProtocols.h"
 #import "DOPhoto.h"
 
 static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
@@ -32,13 +33,22 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
             UIImageView *imageView = [UIImageView newAutoLayoutView];
             [imageView setClipsToBounds:YES];
             [imageView setContentMode:UIViewContentModeScaleAspectFill];
+            [imageView setTag:i ];
             [self.photoViews addObject:imageView];
             [self.contentView addSubview:imageView];
+            [imageView setUserInteractionEnabled:YES];
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+                                                  initWithTarget:self
+                                                          action:@selector(onTapGesture:)];
+            [tapGesture setNumberOfTapsRequired:2];
+            [imageView addGestureRecognizer:tapGesture];
         }
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(onDeviceOrientationChanged:)
-                                                     name: UIApplicationDidChangeStatusBarFrameNotification object:Nil];
+                                                     name:UIApplicationDidChangeStatusBarFrameNotification
+                                                   object:Nil];
+        
         
         
     }
@@ -81,7 +91,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 - (void) setPhotos:(NSArray *)photos
 {
     _photos = photos;
-    NSInteger cnt = MIN([photos count], [self.photoViews count]);
+    NSInteger cnt = [self photoCount];
     for ( NSInteger i=0; i<cnt; i++) {
         DOPhoto *photo = [photos objectAtIndex:i];
         UIImageView *imageView = [self.photoViews objectAtIndex:i];
@@ -95,6 +105,29 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
     
+}
+
+- (void) onTapGesture:(UIGestureRecognizer *) gesture
+{
+    NSMutableArray *photoUrls = [[NSMutableArray alloc]initWithCapacity:[self photoCount]];
+    if ( self.gestureHandler && gesture.state == UIGestureRecognizerStateEnded ) {
+        NSInteger idx = gesture.view.tag;
+        NSInteger cnt = [self photoCount];
+        photoUrls = [[NSMutableArray alloc] initWithCapacity:cnt];
+        for (NSInteger i = 0; i<cnt; i++) {
+            DOPhoto *photo = [self.photos objectAtIndex:i ];
+            [photoUrls addObject:photo.url];
+        }
+    
+        [self.gestureHandler onPhotosDoubleTapped:photoUrls startAt:idx];
+        
+    }
+    
+}
+
+- (NSInteger) photoCount
+{
+    return MIN([self.photos count], [self.photoViews count]);
 }
 
 @end

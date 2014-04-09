@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 DODOPIPE LIMITED. All rights reserved.
 //
 
+#import "DOPTimelineProtocols.h"
 #import "DOPMemoryDataLoader.h"
 #import "DOPLoremIpsumGenerator.h"
 #import "DOPostStream.h"

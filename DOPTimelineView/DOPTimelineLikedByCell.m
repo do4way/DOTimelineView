@@ -44,8 +44,11 @@
     [super updateConstraints];
     if (self.didConstraintsUpdated ) return;
     
-    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
+    [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
         [self.likedByIcon autoSetContentHuggingPriorityForAxis:ALAxisHorizontal];
+    }];
+    
+    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
         [self.likedByText autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
     }];
     
