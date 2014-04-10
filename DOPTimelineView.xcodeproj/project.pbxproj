@@ -28,6 +28,9 @@
 		8518E3E718F24F1C001B3280 /* DOPTimelineLikedByCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E3E618F24F1C001B3280 /* DOPTimelineLikedByCell.m */; };
 		8518E3EA18F26266001B3280 /* DOPTimelineCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E3E918F26266001B3280 /* DOPTimelineCommentCell.m */; };
 		8518E3ED18F2CD49001B3280 /* DOPTimelineCommandsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8518E3EC18F2CD49001B3280 /* DOPTimelineCommandsCell.m */; };
+		85CEE10918F69AE300D83182 /* DOPApplicationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CEE10818F69AE300D83182 /* DOPApplicationUtils.m */; };
+		85CEE10E18F69AF400D83182 /* DOPFadeInSegueBackward.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CEE10B18F69AF400D83182 /* DOPFadeInSegueBackward.m */; };
+		85CEE10F18F69AF400D83182 /* DOPFadeOutSegueForward.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CEE10D18F69AF400D83182 /* DOPFadeOutSegueForward.m */; };
 		85D324FF18E99B9B00AA73AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D324FE18E99B9B00AA73AF /* Foundation.framework */; };
 		85D3250D18E99B9B00AA73AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3250C18E99B9B00AA73AF /* XCTest.framework */; };
 		85D3250E18E99B9B00AA73AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D324FE18E99B9B00AA73AF /* Foundation.framework */; };
@@ -63,7 +66,6 @@
 		36CD594DFD03419880FB9397 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504D55F18E9B65400059303 /* DOPostStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPostStream.h; sourceTree = "<group>"; };
 		8504D56018E9B65400059303 /* DOPostStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostStream.m; sourceTree = "<group>"; };
-		8504D56A18E9B77600059303 /* DOPTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineViewController.h; sourceTree = "<group>"; };
 		8504D56B18E9B77600059303 /* DOPTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTimelineViewController.m; sourceTree = "<group>"; };
 		8504D56F18E9B7D500059303 /* DOPostStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostStreamTests.m; sourceTree = "<group>"; };
 		8504D57018E9B7D500059303 /* DOPostTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPostTests.m; sourceTree = "<group>"; };
@@ -103,7 +105,15 @@
 		8542C7D618F42E3D00ACA608 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
 		8542C7D718F42E4100ACA608 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/DOPTimeline.strings; sourceTree = "<group>"; };
 		8542C7D818F42E4300ACA608 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resources/zh-Hans.lproj/DOPTimeline.strings"; sourceTree = "<group>"; };
-		8542C7EA18F4F22800ACA608 /* DOPTimelineProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineProtocols.h; sourceTree = "<group>"; };
+		85CEE10718F69AE300D83182 /* DOPApplicationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPApplicationUtils.h; sourceTree = "<group>"; };
+		85CEE10818F69AE300D83182 /* DOPApplicationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPApplicationUtils.m; sourceTree = "<group>"; };
+		85CEE10A18F69AF400D83182 /* DOPFadeInSegueBackward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPFadeInSegueBackward.h; sourceTree = "<group>"; };
+		85CEE10B18F69AF400D83182 /* DOPFadeInSegueBackward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPFadeInSegueBackward.m; sourceTree = "<group>"; };
+		85CEE10C18F69AF400D83182 /* DOPFadeOutSegueForward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPFadeOutSegueForward.h; sourceTree = "<group>"; };
+		85CEE10D18F69AF400D83182 /* DOPFadeOutSegueForward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPFadeOutSegueForward.m; sourceTree = "<group>"; };
+		85CEE11018F69B0E00D83182 /* DOPTimelinePhotoCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOPTimelinePhotoCellDelegate.h; sourceTree = "<group>"; };
+		85CEE11418F69DB200D83182 /* DOPTimelineProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineProtocols.h; sourceTree = "<group>"; };
+		85CEE11518F69DC900D83182 /* DOPTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTimelineViewController.h; sourceTree = "<group>"; };
 		85D324FB18E99B9B00AA73AF /* libDOPTimelineView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDOPTimelineView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D324FE18E99B9B00AA73AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85D3250218E99B9B00AA73AF /* DOPTimelineView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DOPTimelineView-Prefix.pch"; sourceTree = "<group>"; };
@@ -184,7 +194,7 @@
 		8504D56D18E9B78F00059303 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8504D56A18E9B77600059303 /* DOPTimelineViewController.h */,
+				85CEE11518F69DC900D83182 /* DOPTimelineViewController.h */,
 				8504D56B18E9B77600059303 /* DOPTimelineViewController.m */,
 			);
 			name = ViewControllers;
@@ -242,12 +252,19 @@
 		85D3250018E99B9B00AA73AF /* DOPTimelineView */ = {
 			isa = PBXGroup;
 			children = (
+				85CEE10718F69AE300D83182 /* DOPApplicationUtils.h */,
+				85CEE10818F69AE300D83182 /* DOPApplicationUtils.m */,
+				85CEE10A18F69AF400D83182 /* DOPFadeInSegueBackward.h */,
+				85CEE10B18F69AF400D83182 /* DOPFadeInSegueBackward.m */,
+				85CEE10C18F69AF400D83182 /* DOPFadeOutSegueForward.h */,
+				85CEE10D18F69AF400D83182 /* DOPFadeOutSegueForward.m */,
+				85CEE11018F69B0E00D83182 /* DOPTimelinePhotoCellDelegate.h */,
+				85CEE11418F69DB200D83182 /* DOPTimelineProtocols.h */,
 				8504D56D18E9B78F00059303 /* ViewControllers */,
 				8504D56918E9B75100059303 /* Views */,
 				8504D56218E9B6F500059303 /* Models */,
 				8518E34618EAB6B0001B3280 /* Utils */,
 				85D3250118E99B9B00AA73AF /* Supporting Files */,
-				8542C7EA18F4F22800ACA608 /* DOPTimelineProtocols.h */,
 			);
 			path = DOPTimelineView;
 			sourceTree = "<group>";
@@ -435,6 +452,8 @@
 			files = (
 				8518E34318EAB6A6001B3280 /* DOPImageLoader.m in Sources */,
 				8518E33C18EAB695001B3280 /* DOPost.m in Sources */,
+				85CEE10918F69AE300D83182 /* DOPApplicationUtils.m in Sources */,
+				85CEE10E18F69AF400D83182 /* DOPFadeInSegueBackward.m in Sources */,
 				8518E38018ED4AE8001B3280 /* DOPTimelineAppearance.m in Sources */,
 				8518E3EA18F26266001B3280 /* DOPTimelineCommentCell.m in Sources */,
 				8518E3E718F24F1C001B3280 /* DOPTimelineLikedByCell.m in Sources */,
@@ -443,6 +462,7 @@
 				8518E38918EE5E91001B3280 /* DOPLoremIpsumGenerator.m in Sources */,
 				8518E34B18EAE5B5001B3280 /* DOPhoto.m in Sources */,
 				8518E37518EC05F6001B3280 /* DOPTimelinePhotoCell.m in Sources */,
+				85CEE10F18F69AF400D83182 /* DOPFadeOutSegueForward.m in Sources */,
 				8518E3E418F23E2D001B3280 /* DOPTimelineCaptionCell.m in Sources */,
 				8518E38618EDCD2B001B3280 /* DOPComment.m in Sources */,
 				8504D56C18E9B77600059303 /* DOPTimelineViewController.m in Sources */,

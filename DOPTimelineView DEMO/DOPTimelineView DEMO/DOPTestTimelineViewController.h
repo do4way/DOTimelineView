@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DOPTimelineViewController.h"
 #import "DOPhotoViewerProtocols.h"
-#import "DOPTimelineProtocols.h"
+#import "DOPTimelineViewController.h"
 
 @interface DOPTestTimelineViewController : DOPTimelineViewController 
 

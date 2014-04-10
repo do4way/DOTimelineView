@@ -49,9 +49,9 @@
         _usersAvatar = @[ @"https://farm8.staticflickr.com/7356/9326896674_9d9a5d36bf_s.jpg",
                      @"https://farm4.staticflickr.com/3813/10038713633_6ee6988e9e_s.jpg"];
         _photos = @[@{@"thumbnailUrl":@"https://farm5.staticflickr.com/4058/4596406502_12fb47c588.jpg",
-                     @"url":@"https://farm2.staticflickr.com/1003/4596407764_e53424fee2_b.jpg"},
+                     @"url":@"https://farm5.staticflickr.com/4058/4596406502_12fb47c588_b.jpg"},
                       @{@"thumbnailUrl": @"https://farm2.staticflickr.com/1003/4596407764_e53424fee2.jpg",
-                        @"url":@"https://farm5.staticflickr.com/4058/4596406502_12fb47c588_b.jpg"},
+                        @"url":@"https://farm2.staticflickr.com/1003/4596407764_e53424fee2_b.jpg"},
                     @{@"thumbnailUrl": @"https://farm5.staticflickr.com/4029/4596406976_983dc88ee8.jpg",
                       @"url":@"https://farm5.staticflickr.com/4029/4596406976_983dc88ee8_b.jpg"},
                     @{@"thumbnailUrl": @"https://farm4.staticflickr.com/3507/3177097877_54b2b91909.jpg",

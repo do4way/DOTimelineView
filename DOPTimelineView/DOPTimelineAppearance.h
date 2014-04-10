@@ -152,7 +152,6 @@ extern NSString *const DOPTL_LOCALIZABLE_STRING_TABLE_NAME;
 
 @interface DOPTimelineAppearance : NSObject
 
-+ (CGRect) currentScreenWidthDependsOrientation;
 - (instancetype) initWithDOPost:(DOPost *) post;
 - (instancetype) initWithDOPost:(DOPost *) post width:(CGFloat)width;
 

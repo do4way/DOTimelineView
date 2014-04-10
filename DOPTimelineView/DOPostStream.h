@@ -21,7 +21,7 @@
 @interface DOPostStream : NSObject
 
 @property (nonatomic, assign) BOOL loading;
-@property (nonatomic, assign) id<DOPostStreamDelegate> streamDelegate;
+@property (nonatomic, weak) id<DOPostStreamDelegate> streamDelegate;
 
 - (instancetype) initWithUserId:(NSString *) userId
                      dataLoader:(id<DOPostsLoaderDelegate>) dataLoader;

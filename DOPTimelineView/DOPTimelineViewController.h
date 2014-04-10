@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 @protocol DOPostsLoaderDelegate;
-@protocol DOPTimelineGestureHandler;
+@protocol DOPTimelineDelegate;
+
+static NSString *const kSEGUE_FORWARDNAME = @"DOPTimelineSegueForward";
 
 @interface DOPTimelineViewController : UITableViewController
 
-@property (nonatomic, weak) id<DOPostsLoaderDelegate> dataLoader;
-@property (nonatomic, weak) id<DOPTimelineGestureHandler> gestureHandler;
+@property (nonatomic, weak) IBOutlet id<DOPostsLoaderDelegate> dataLoader;
+@property (nonatomic, weak) IBOutlet id<DOPTimelineDelegate> delegate;
+
+- (IBAction) segueBackToTimeline:(UIStoryboardSegue *)sender;
 
 @end

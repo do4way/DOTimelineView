@@ -21,6 +21,8 @@
 #import "DOPTimelineCommandsCell.h"
 #import "DOPTimelineAppearance.h"
 #import "DOPTimelineProtocols.h"
+#import "DOPTimelinePhotoCellDelegate.h"
+#import "DOPFadeInSegueBackward.h"
 
 
 /** ------------------------------------------
@@ -36,10 +38,10 @@ static NSString *const DOPTL_COMMENT_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMENT_CE
 static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_CELL";
 
 
-@interface DOPTimelineViewController() <DOPostStreamDelegate>
+@interface DOPTimelineViewController() <DOPostStreamDelegate,DOPTimelinePhotoCellDelegate>
 
 @property (nonatomic, strong) DOPostStream *postStream;
-@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) UIActivityIndicatorView *spinner;
 
 @end
 
@@ -49,8 +51,6 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-        self.tableView.allowsSelection = NO;
     }
     return self;
 }
@@ -63,6 +63,8 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
 - (void) loadView
 {
     [super loadView];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.tableView.allowsSelection = NO;
     self.spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.spinner.translatesAutoresizingMaskIntoConstraints = NO;
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
@@ -74,8 +76,6 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"view loaded");
-    NSLog(@"==%@", self.spinner);
     [self.spinner startAnimating];
     [self.tableView registerClass:[DOPTimelineHeaderCell class]
            forCellReuseIdentifier:DOPTL_HEADER_CELL_REUSE_IDENTIFIER];
@@ -95,29 +95,6 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
     [self.postStream requestMorePosts];
     
 }
-
-- (void) updateViewConstraints
-{
-    [super updateViewConstraints];
-    //[view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0.0];
-    //[view autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0.0];
-    //[view autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0.0];
-    //[view autoSetDimension:ALDimensionHeight toSize:40.0f];
-    
-    //[self.tableView updateConstraints];
-    //[self.spinner autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    //[self.spinner autoAlignAxisToSuperviewAxis:ALAxisVertical];
-}
-
-#pragma mark - user interface interative
-
-
-- (IBAction)onPhotoThumbnailTapped:(UITapGestureRecognizer *)sender {
-    
-    NSLog(@"tab");
-    
-}
-
 
 #pragma mark - table view data source
 
@@ -163,14 +140,14 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
             if ( cnt == 1){
                 DOPTimelinePhotoCell *photo = [tableView dequeueReusableCellWithIdentifier:DOPTL_PHOTO_CELL_REUSE_IDENTIFIER
                                                                           forIndexPath:indexPath];
-                [photo setGestureHandler:self.gestureHandler];
+                [photo setDelegate:self];
                 [photo setPhoto:[post.photos firstObject]];
                 cell = photo;
                 
             }else if ( cnt > 1) {
                DOPTimelinePhotoGridCell *photos = [tableView dequeueReusableCellWithIdentifier:DOPTL_PHOTOGRID_CELL_REUSE_IDENTIFIER
                                                                                   forIndexPath:indexPath];
-                [photos setGestureHandler:self.gestureHandler];
+                [photos setDelegate:self];
                 [photos setPhotos:post.photos];
                 cell = photos;
             }
@@ -251,6 +228,42 @@ static NSString *const DOPTL_COMMANDS_CELL_REUSE_IDENTIFIER  = @"DOPTL_COMMANDS_
     [self.tableView setNeedsUpdateConstraints];
     [self.tableView updateConstraintsIfNeeded];
     
+}
+
+- (void) didPhotosTapped:(UIGestureRecognizer *)gesture
+               photoUrls:(NSArray *)photoUrls
+                   tapAt:(NSInteger)idx
+{
+    if ([self.delegate respondsToSelector:@selector(onPhotosTapped:photoUrls:startAt:)]){
+        [self.delegate onPhotosTapped:gesture photoUrls:photoUrls startAt:idx];
+    }
+    
+    [self performSegueWithIdentifier:kSEGUE_FORWARDNAME sender:self];
+    
+}
+
+#pragma mark - Navigation
+
+- (IBAction)segueBackToTimeline:(UIStoryboardSegue *)sender
+{
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(readyForSegueForward:sender:)]) {
+         [self.delegate readyForSegueForward:segue sender:sender];
+    }
+}
+
+- (UIStoryboardSegue *) segueForUnwindingToViewController:(UIViewController *)toViewController
+                                       fromViewController:(UIViewController *)fromViewController
+                                               identifier:(NSString *)identifier
+{
+    NSLog(@"unwinding %@,%@",fromViewController,toViewController);
+    DOPFadeInSegueBackward *segue = [[DOPFadeInSegueBackward alloc] initWithIdentifier:identifier
+                                                                                source:fromViewController
+                                                                           destination:toViewController];
+    return segue;
 }
 
 #pragma mark - Privates

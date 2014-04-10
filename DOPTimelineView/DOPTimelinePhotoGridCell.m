@@ -9,7 +9,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DOPTimelinePhotoGridCell.h"
 #import "DOPTimelineAppearance.h"
-#import "DOPTimelineProtocols.h"
+#import "DOPApplicationUtils.h"
+#import "DOPTimelinePhotoCellDelegate.h"
 #import "DOPhoto.h"
 
 static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
@@ -40,7 +41,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
                                                   initWithTarget:self
                                                           action:@selector(onTapGesture:)];
-            [tapGesture setNumberOfTapsRequired:2];
+            [tapGesture setNumberOfTapsRequired:1];
             [imageView addGestureRecognizer:tapGesture];
         }
         
@@ -60,7 +61,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
     [super updateConstraints];
     if (self.didConstraintsUpdated) return;
     
-    CGFloat cellWidth = [DOPTimelineAppearance currentScreenWidthDependsOrientation].size.width ;
+    CGFloat cellWidth = [DOPApplicationUtils currentScreenDependsOrientation].size.width ;
     CGFloat photoWidth = (cellWidth - ( DOPTL_PHOTOS_GRID_COLUMN_NUM - 1 ) * DOPTL_PHOTOS_GRID_PADDING ) / DOPTL_PHOTOS_GRID_COLUMN_NUM;
     NSInteger cnt = DOPTL_PHOTOS_GRID_COLUMN_NUM * DOPTL_PHOTOS_GRID_ROW_NUM;
     for ( NSInteger i=0; i<cnt; i++) {
@@ -110,7 +111,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 - (void) onTapGesture:(UIGestureRecognizer *) gesture
 {
     NSMutableArray *photoUrls = [[NSMutableArray alloc]initWithCapacity:[self photoCount]];
-    if ( self.gestureHandler && gesture.state == UIGestureRecognizerStateEnded ) {
+    if ( self.delegate && gesture.state == UIGestureRecognizerStateEnded ) {
         NSInteger idx = gesture.view.tag;
         NSInteger cnt = [self photoCount];
         photoUrls = [[NSMutableArray alloc] initWithCapacity:cnt];
@@ -118,9 +119,12 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
             DOPhoto *photo = [self.photos objectAtIndex:i ];
             [photoUrls addObject:photo.url];
         }
-    
-        [self.gestureHandler onPhotosDoubleTapped:photoUrls startAt:idx];
         
+        if ( [self.delegate respondsToSelector:@selector(didPhotosTapped:photoUrls:tapAt:)]) {
+            
+            [self.delegate didPhotosTapped:gesture photoUrls:photoUrls tapAt:idx];
+        }
+    
     }
     
 }

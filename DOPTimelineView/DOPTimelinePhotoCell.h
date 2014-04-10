@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class DOPhoto;
-@protocol DOPTimelineGestureHandler;
+@protocol DOPTimelinePhotoCellDelegate;
 
 @interface DOPTimelinePhotoCell : UITableViewCell
 
-@property (nonatomic,weak) id<DOPTimelineGestureHandler> gestureHandler;
+@property (nonatomic,weak) id<DOPTimelinePhotoCellDelegate> delegate;
 - (void) setPhoto:(DOPhoto *)photo;
 
 @end

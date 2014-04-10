@@ -16,8 +16,13 @@
 
 @end
 
-@protocol DOPTimelineGestureHandler <NSObject>
+@protocol DOPTimelineDelegate <NSObject>
 
-- (void) onPhotosDoubleTapped:(NSArray*) photoUrls startAt:(NSInteger)idx;
+@optional
+- (void) onPhotosTapped:(UIGestureRecognizer*)gesture
+              photoUrls:(NSArray*)photoUrls
+                startAt:(NSInteger)idx;
+
+-(void) readyForSegueForward:(UIStoryboardSegue *) segue sender:(id)sender;
 
 @end

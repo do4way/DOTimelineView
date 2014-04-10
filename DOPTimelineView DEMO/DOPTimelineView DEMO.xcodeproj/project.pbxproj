@@ -25,6 +25,7 @@
 		8542C7E918F439AB00ACA608 /* DOPTimeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8542C7E818F439AB00ACA608 /* DOPTimeline.storyboard */; };
 		8542C7ED18F504E100ACA608 /* DOPTestTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542C7EC18F504E100ACA608 /* DOPTestTimelineViewController.m */; };
 		8542C7EF18F5218B00ACA608 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8542C7EE18F5218B00ACA608 /* main.storyboard */; };
+		85CEE11818F6B5A600D83182 /* DOPDemoDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CEE11718F6B5A600D83182 /* DOPDemoDestinationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		8542C7EB18F504E100ACA608 /* DOPTestTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPTestTimelineViewController.h; sourceTree = "<group>"; };
 		8542C7EC18F504E100ACA608 /* DOPTestTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPTestTimelineViewController.m; sourceTree = "<group>"; };
 		8542C7EE18F5218B00ACA608 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		85CEE11618F6B5A600D83182 /* DOPDemoDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDemoDestinationViewController.h; sourceTree = "<group>"; };
+		85CEE11718F6B5A600D83182 /* DOPDemoDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDemoDestinationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				8542C7EB18F504E100ACA608 /* DOPTestTimelineViewController.h */,
 				8542C7EC18F504E100ACA608 /* DOPTestTimelineViewController.m */,
 				8542C7EE18F5218B00ACA608 /* main.storyboard */,
+				85CEE11618F6B5A600D83182 /* DOPDemoDestinationViewController.h */,
+				85CEE11718F6B5A600D83182 /* DOPDemoDestinationViewController.m */,
 			);
 			path = "DOPTimelineView DEMO";
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			files = (
 				8504D5DD18EA582600059303 /* DOPAppDelegate.m in Sources */,
 				8542C7ED18F504E100ACA608 /* DOPTestTimelineViewController.m in Sources */,
+				85CEE11818F6B5A600D83182 /* DOPDemoDestinationViewController.m in Sources */,
 				8504D5D918EA582600059303 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

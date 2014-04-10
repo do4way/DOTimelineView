@@ -116,7 +116,7 @@
 -(void) updateLikedByNum
 {
     if (_likedByNum > 0 ) {
-        self.likedNumLabel.text = [NSString stringWithFormat:@"%d",_likedByNum];
+        self.likedNumLabel.text = [NSString stringWithFormat:@"%ld",(long)_likedByNum];
         self.likedIcon.image = [UIImage likeIcon];
         
     }
@@ -125,7 +125,7 @@
 - (void) updateCommentedNum
 {
     if (_commentedNum > 0 ) {
-        self.commentedNumLabel.text = [NSString stringWithFormat:@"%d",_commentedNum];
+        self.commentedNumLabel.text = [NSString stringWithFormat:@"%ld",(long)_commentedNum];
         self.commentedIcon.image = [UIImage commentIcon];
         
     }

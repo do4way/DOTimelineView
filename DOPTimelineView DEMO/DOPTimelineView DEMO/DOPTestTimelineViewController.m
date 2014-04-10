@@ -7,11 +7,10 @@
 //
 
 #import "DOPTestTimelineViewController.h"
-#import "DOPTimelineViewController.h"
 #import "DOPhotoViewerProtocols.h"
 #import "DOPTimelineProtocols.h"
 
-@interface DOPTestTimelineViewController () <DOPTimelineGestureHandler,DOPhotoViewerDataSource> 
+@interface DOPTestTimelineViewController () <DOPTimelineDelegate,DOPhotoViewerDataSource>
 
 @property (nonatomic,strong) NSArray *photoUrls;
 @property (nonatomic,assign) NSInteger idx;
@@ -23,18 +22,24 @@
 
 - (void) viewDidLoad {
     
-   [self setGestureHandler:self];
+   [self setDelegate:self];
     [super viewDidLoad];
 }
 
-- (void) onPhotosDoubleTapped:(NSArray *)photoUrls startAt:(NSInteger)idx
+
+- (void) onPhotosTapped:(UIGestureRecognizer*)gesture
+              photoUrls:(NSArray*)photoUrls
+                startAt:(NSInteger)idx;
 {
+    
     NSLog(@"photo tapped: %@, startAt:%d", photoUrls,idx);
     self.photoUrls = photoUrls;
     self.idx = idx;
-    [self performSegueWithIdentifier:@"MySegue" sender:self];
 }
-
+-(void) readyForSegueForward:(UIStoryboardSegue *) segue sender:(id)sender;
+{
+    NSLog(@"ready for segue:%@,%@",segue,sender);
+}
 #pragma mark - DOPhotoViewer data source
 - (NSUInteger) numberOfPhotos
 {
@@ -44,9 +49,9 @@
 
 - (NSURL *) photoUrlAtIndex:(NSUInteger) idx;
 {
-    
     return [NSURL URLWithString:[self.photoUrls objectAtIndex:idx]];
 }
+
 
 
 - (NSUInteger) startAtPage;

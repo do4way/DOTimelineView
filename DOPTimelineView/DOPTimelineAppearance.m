@@ -7,6 +7,7 @@
 //
 
 #import "DOPTimelineAppearance.h"
+#import "DOPApplicationUtils.h"
 #import "DOPost.h"
 
 /** --------------------------------------------
@@ -266,22 +267,10 @@ NSString *const DOPTL_LOCALIZABLE_STRING_TABLE_NAME = @"DOPTimeline";
 
 @implementation DOPTimelineAppearance
 
-+ (CGRect) currentScreenWidthDependsOrientation {
-    
-    CGRect screenBounds = [UIScreen mainScreen].bounds;
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
-        CGFloat width = CGRectGetWidth(screenBounds);
-        CGFloat height = CGRectGetHeight(screenBounds);
-        screenBounds.size = CGSizeMake(height,width);
-    }
-    return screenBounds;
-    
-}
 
 - (instancetype) initWithDOPost:(DOPost *)post
 {
-    CGFloat width = [DOPTimelineAppearance currentScreenWidthDependsOrientation].size.width;
+    CGFloat width = [DOPApplicationUtils currentScreenDependsOrientation].size.width;
     return [self initWithDOPost:post width:width];
 }
 

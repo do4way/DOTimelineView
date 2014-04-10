@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8rs-HI-TyQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qB4-F6-zs3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Test Timeline View Controller - Root View Controller-->
+        <!--Test Timeline View Controller-->
         <scene sceneID="NEQ-sh-T1O">
             <objects>
                 <tableViewController id="qB4-F6-zs3" customClass="DOPTestTimelineViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GOm-lA-buh">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GOm-lA-buh" id="ztc-Zr-19O">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
@@ -30,57 +30,38 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="5bA-ys-chc">
                             <connections>
-                                <segue destination="3CX-5o-noe" kind="push" identifier="MySegue" id="Wj5-fo-Sfb"/>
+                                <segue destination="3CX-5o-noe" kind="custom" identifier="DOPTimelineSegueForward" customClass="DOPFadeOutSegueForward" id="FZl-H4-Pni"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="9Ru-YX-6GJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haY-22-aNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="446" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Demo Destination View Controller-->
         <scene sceneID="LPz-Xf-oWc">
             <objects>
-                <viewController id="3CX-5o-noe" sceneMemberID="viewController">
+                <viewController id="3CX-5o-noe" customClass="DOPDemoDestinationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6ac-X0-drv"/>
                         <viewControllerLayoutGuide type="bottom" id="trZ-hT-zdz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YEL-jo-JQt" customClass="DOPhotoViewController">
+                    <view key="view" contentMode="scaleToFill" id="YEL-jo-JQt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="E2k-KW-eDb"/>
+                    <connections>
+                        <segue destination="N1w-Bx-G4c" kind="unwind" identifier="DOPTimelineSegueBackward" unwindAction="segueBackToTimeline:" id="pVZ-0p-TRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAH-so-nGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="N1w-Bx-G4c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="849" y="-32"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VJI-7V-5tB">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="8rs-HI-TyQ" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ieU-Cc-ARw">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jct-V7-0gL">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="qB4-F6-zs3" kind="relationship" relationship="rootViewController" id="3Fq-X0-hwa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QMq-9a-wdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-88" y="-27"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

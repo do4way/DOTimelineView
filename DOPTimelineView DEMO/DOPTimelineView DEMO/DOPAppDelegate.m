@@ -7,7 +7,6 @@
 //
 
 #import "DOPAppDelegate.h"
-#import "DOPTimelineViewController.h"
 #import "DOPTestTimelineViewController.h"
 
 @implementation DOPAppDelegate
