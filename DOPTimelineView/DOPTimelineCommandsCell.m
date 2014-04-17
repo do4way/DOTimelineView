@@ -38,14 +38,14 @@
         self.commentedNumLabel = [UILabel newAutoLayoutView];
         self.commentedIcon = [UIImageView newAutoLayoutView];
         
-        [self.likeBtn setTitle:NSLocalizedString(@"Like", nil) forState:UIControlStateNormal];
+        [self.likeBtn setTitle:NSLocalizedStringFromTable(@"  Like", @"DOPTimeline",nil) forState:UIControlStateNormal];
         [self.likeBtn setTitleColor:[UIColor likeBtnTextColor] forState:UIControlStateNormal];
         [self.likeBtn.titleLabel setFont:[UIFont likeBtnTextFont]];
         [self.likeBtn setBackgroundColor:[UIColor btnBackgroundColor]];
         [self.likeBtn setImage:[UIImage likeIcon] forState:UIControlStateNormal];
         self.likeBtn.contentEdgeInsets = UIEdgeInsetsMake(5.0f,5.0f,5.0f,5.0f);
         
-        [self.commentBtn setTitle:NSLocalizedString(@"Comment",nil) forState:UIControlStateNormal];
+        [self.commentBtn setTitle:NSLocalizedStringFromTable(@"  Comment",@"DOPTimeline",nil) forState:UIControlStateNormal];
         [self.commentBtn setTitleColor:[UIColor commentBtnTextColor] forState:UIControlStateNormal];
         [self.commentBtn.titleLabel setFont:[UIFont commentBtnTextFont]];
         [self.commentBtn setBackgroundColor:[UIColor btnBackgroundColor]];

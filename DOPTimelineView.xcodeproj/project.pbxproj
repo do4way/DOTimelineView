@@ -348,7 +348,7 @@
 		85D324F318E99B9B00AA73AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "DODOPIPE LIMITED";
 			};
 			buildConfigurationList = 85D324F618E99B9B00AA73AF /* Build configuration list for PBXProject "DOPTimelineView" */;
@@ -519,7 +519,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -557,7 +556,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -621,11 +619,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
-					armv6,
-					i386,
-				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -637,6 +630,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "DOPTimelineViewTests/DOPTimelineViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
@@ -647,11 +641,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D854AC7EF1DB4AF4855909B5 /* Pods-DOPTimelineViewTests.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_INCLUDING_64_BIT)",
-					armv6,
-					i386,
-				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -659,6 +648,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DOPTimelineView/DOPTimelineView-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "DOPTimelineViewTests/DOPTimelineViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
