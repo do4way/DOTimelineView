@@ -18,7 +18,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 @interface DOPTimelinePhotoGridCell()
 
 @property (nonatomic, strong) NSArray *photos;
-@property (nonatomic, strong) NSMutableArray *photoViews;
+@property (nonatomic, strong) NSArray *photoViews;
 @property (nonatomic, assign) BOOL didConstraintsUpdated;
 @end
 
@@ -29,13 +29,14 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         NSInteger cnt = DOPTL_PHOTOS_GRID_COLUMN_NUM * DOPTL_PHOTOS_GRID_ROW_NUM;
-        self.photoViews = [[NSMutableArray alloc] initWithCapacity:cnt];
+        NSMutableArray *views = [[NSMutableArray alloc] initWithCapacity:cnt];
+        
         for ( NSInteger i = 0; i<cnt; i++ ) {
             UIImageView *imageView = [UIImageView newAutoLayoutView];
             [imageView setClipsToBounds:YES];
             [imageView setContentMode:UIViewContentModeScaleAspectFill];
             [imageView setTag:i ];
-            [self.photoViews addObject:imageView];
+            [views addObject:imageView];
             [self.contentView addSubview:imageView];
             [imageView setUserInteractionEnabled:YES];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
@@ -44,6 +45,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
             [tapGesture setNumberOfTapsRequired:1];
             [imageView addGestureRecognizer:tapGesture];
         }
+        self.photoViews = [views copy];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(onDeviceOrientationChanged:)
@@ -54,6 +56,15 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
         
     }
     return self;
+}
+
+- (void) prepareForReuse
+{
+    self.photos = @[];
+    for (UIImageView *view in self.photoViews)
+    {
+        view.image = Nil;
+    }
 }
 
 - (void) updateConstraints

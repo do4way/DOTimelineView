@@ -34,6 +34,7 @@
     
     NSLog(@"photo tapped: %@, startAt:%d", photoUrls,idx);
     self.photoUrls = photoUrls;
+    NSLog(@"get photos num : %ld", (long)[self.photoUrls count]);
     self.idx = idx;
 }
 -(void) readyForSegueForward:(UIStoryboardSegue *) segue sender:(id)sender;
