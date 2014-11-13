@@ -27,6 +27,7 @@
         [self.captionLabel setLineBreakMode:NSLineBreakByTruncatingTail];
         [self.captionLabel setNumberOfLines:0];
         [self.contentView addSubview:self.captionLabel];
+        [self setupConstraints];
     }
     return self;
 }
@@ -36,15 +37,7 @@
 {
     [super updateConstraints];
     if ( self.didConstraintsUpdated ) return;
-    /*[UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
-        [self.captionLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
-        
-    }];*/
-    [self.captionLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:DOPTL_CAPTION_MARGIN_TOP];
-    [self.captionLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:DOPTL_CAPTION_MARGIN_LEFT];
-    [self.captionLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:DOPTL_CAPTION_MARGIN_RIGHT];
-    
-    self.didConstraintsUpdated = YES;
+    [self setupConstraints];
     
 }
 
@@ -52,10 +45,26 @@
 {
     self.captionLabel.text = nil;
 }
+
 - (void) setCaption:(NSString *)caption
 {
     [self.captionLabel setText:caption];
 }
 
+#pragma mark - private methods
+
+-(void)setupConstraints
+{
+    /*[UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
+     [self.captionLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
+     
+     }];*/
+    [self.captionLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:DOPTL_CAPTION_MARGIN_TOP];
+    [self.captionLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:DOPTL_CAPTION_MARGIN_LEFT];
+    [self.captionLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:DOPTL_CAPTION_MARGIN_RIGHT];
+    
+    self.didConstraintsUpdated = YES;
+    
+}
 
 @end

@@ -35,6 +35,7 @@
         [self.contentView addSubview:self.likedByIcon];
         [self.contentView addSubview:self.likedByText];
         
+        [self setupConstraints];
     }
     return self;
 }
@@ -43,6 +44,20 @@
 {
     [super updateConstraints];
     if (self.didConstraintsUpdated ) return;
+    
+    [self setupConstraints];
+
+}
+
+
+- (void) setLikedBy:(NSString *)likedBy
+{
+    [self.likedByText setText:likedBy];
+}
+
+#pragma mark - private method
+-(void) setupConstraints
+{
     
     [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
         [self.likedByIcon autoSetContentHuggingPriorityForAxis:ALAxisHorizontal];
@@ -60,12 +75,7 @@
     [self.likedByText autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.likedByIcon];
     
     self.didConstraintsUpdated = YES;
-}
-
-
-- (void) setLikedBy:(NSString *)likedBy
-{
-    [self.likedByText setText:likedBy];
+    
 }
 
 @end

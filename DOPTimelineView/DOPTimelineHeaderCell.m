@@ -48,6 +48,7 @@
         [self.contentView addSubview:self.userName];
         [self.contentView addSubview:self.timerIcon];
         [self.contentView addSubview:self.updateTime];
+        [self setupConstraints];
         
     }
     return self;
@@ -64,17 +65,36 @@
 {
     [super updateConstraints];
     
-    NSLog(@"update head cell constraints");
     if (self.didSetupConstraints)
         return;
     
+    [self setupConstraints];
+
+    
+}
+
+- (void) setHeaderWithAvatarUrl:(NSURL *)url userName:(NSString *)userName updateTime:(NSString *)time
+{
+    self.userName.text = userName;
+    self.updateTime.text = time;
+    [DOPImageLoader loadRoundedImageWithUrl:url
+                                 completion:^(UIImage *image, NSError *error){
+                                     if (!error) {
+                                         self.avatar.image = image;
+                                     }
+                                 }];
+}
+
+#pragma mark - private methods
+-(void)setupConstraints
+{
     [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
         [self.updateTime autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
-    
+        
     }];
     [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
         [self.userName autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
-    
+        
     }];
     
     [self.avatar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:DOPTL_AVATOR_MARGIN_TOP];
@@ -97,18 +117,6 @@
     
     self.didSetupConstraints = YES;
     
-}
-
-- (void) setHeaderWithAvatarUrl:(NSURL *)url userName:(NSString *)userName updateTime:(NSString *)time
-{
-    self.userName.text = userName;
-    self.updateTime.text = time;
-    [DOPImageLoader loadRoundedImageWithUrl:url
-                                 completion:^(UIImage *image, NSError *error){
-                                     if (!error) {
-                                         self.avatar.image = image;
-                                     }
-                                 }];
 }
 
 @end

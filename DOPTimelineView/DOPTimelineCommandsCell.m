@@ -64,6 +64,7 @@
         [self.contentView addSubview:self.likedIcon];
         [self.contentView addSubview:self.commentedNumLabel];
         [self.contentView addSubview:self.commentedIcon];
+        [self setupConstraints];
         
     }
     return self;
@@ -73,6 +74,36 @@
 {
     [super updateConstraints];
     if (self.didConstraintsUpdated) return;
+    [self setupConstraints];
+}
+
+
+-(void) setLikedByNum:(NSInteger)likedByNum commentedNum:(NSInteger)commentedNum
+{
+    _likedByNum = likedByNum ? likedByNum : 0;
+    _commentedNum = commentedNum ? commentedNum : 0;
+}
+
+-(void) updateLikedByNum
+{
+    if (_likedByNum > 0 ) {
+        self.likedNumLabel.text = [NSString stringWithFormat:@"%ld",(long)_likedByNum];
+        self.likedIcon.image = [UIImage likeIcon];
+        
+    }
+}
+
+- (void) updateCommentedNum
+{
+    if (_commentedNum > 0 ) {
+        self.commentedNumLabel.text = [NSString stringWithFormat:@"%ld",(long)_commentedNum];
+        self.commentedIcon.image = [UIImage commentIcon];
+        
+    }
+}
+
+-(void)setupConstraints
+{
     [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
         [self.likeBtn autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
         [self.commentBtn autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
@@ -102,33 +133,7 @@
     [self.likedIcon autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.likedNumLabel withOffset:DOPTL_COMMAND_LIKED_ICON_MARGIN_RELATED_RIGHT];
     [self.likedIcon autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.likeBtn];
     self.didConstraintsUpdated = YES;
-}
-
-
--(void) setLikedByNum:(NSInteger)likedByNum commentedNum:(NSInteger)commentedNum
-{
-    _likedByNum = likedByNum ? likedByNum : 0;
-    _commentedNum = commentedNum ? commentedNum : 0;
-    [self updateCommentedNum];
-    [self updateLikedByNum];
-}
-
--(void) updateLikedByNum
-{
-    if (_likedByNum > 0 ) {
-        self.likedNumLabel.text = [NSString stringWithFormat:@"%ld",(long)_likedByNum];
-        self.likedIcon.image = [UIImage likeIcon];
-        
-    }
-}
-
-- (void) updateCommentedNum
-{
-    if (_commentedNum > 0 ) {
-        self.commentedNumLabel.text = [NSString stringWithFormat:@"%ld",(long)_commentedNum];
-        self.commentedIcon.image = [UIImage commentIcon];
-        
-    }
+    
 }
 
 @end

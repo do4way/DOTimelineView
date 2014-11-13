@@ -58,14 +58,14 @@ CGFloat  const DOPTL_LIKEDBY_ICON_HEIGHT           = 12.0f;
 CGFloat  const DOPTL_LIKEDBY_TEXT_MARGIN_RELATED_LEFT = 5.0f;
 CGFloat  const DOPTL_LIKEDBY_TEXT_MARGIN_RIGHT     = 5.0f;
 CGFloat  const DOPTL_LIKEDBY_TEXT_FONT_SIZE        = 14.0f;
-CGFloat  const DOPTL_LIKEDBY_TEXT_HEIGHT           = 15.0f;
+CGFloat  const DOPTL_LIKEDBY_TEXT_HEIGHT           = 16.0f;
 
 /** ------------------------------------------
  *    Timeline Comment Layout
  *  ------------------------------------------*/
 CGFloat  const DOPTL_COMMENT_USERNAME_MARGIN_TOP   = 0.0f;
 CGFloat  const DOPTL_COMMENT_USERNAME_MARGIN_LEFT  = 5.0f;
-CGFloat  const DOPTL_COMMENT_USERNAME_HEIGHT       = 16.0f;
+CGFloat  const DOPTL_COMMENT_USERNAME_HEIGHT       = 18.0f;
 CGFloat  const DOPTL_COMMENT_UNC_SPEPARATOR_MARGIN_RELATED_LEFT = 2.0f;
 CGFloat  const DOPTL_COMMENT_UNC_SPEPARATOR_WIDTH  = 4.0f;
 NSString *const DOPTL_COMMENT_UNC_SPEPARATOR_STRING = @":";
@@ -256,7 +256,7 @@ NSString *const DOPTL_LOCALIZABLE_STRING_TABLE_NAME = @"DOPTimeline";
 @interface DOPTimelineAppearance()
 
 
-@property (nonatomic,strong) DOPost *post;
+@property (nonatomic,copy) DOPost *post;
 @property (nonatomic) CGFloat width;
 @property (nonatomic) BOOL toUsePhotoPicker;
 @property (nonatomic) BOOL hasCaption;

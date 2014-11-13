@@ -37,6 +37,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
         [tapGesture setNumberOfTapsRequired:1];
         [tapGesture setDelegate:self];
         [self addGestureRecognizer:tapGesture];
+        [self setupConstraints];
     }
     return self;
     
@@ -47,14 +48,8 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 {
     [super updateConstraints];
     if ( _didConstraintsUpdated ) return;
-    [self.photoView autoRemoveConstraintsAffectingView];
-    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:DOPTL_PHOTOS_MARGIN_TOP];
-    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:DOPTL_PHOTOS_MARGIN_LEFT];
-    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:DOPTL_PHOTOS_MARGIN_RIGHT];
-    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0.0f];
-    //CGFloat width = [self contentView].bounds.size.width;
-    //[self.photoView autoSetDimension:ALDimensionHeight toSize:width * DOPTL_SINGLE_PHOTO_ASPECTRADIO ];
-    _didConstraintsUpdated = YES;
+    
+    [self setupConstraints];
     
 }
 
@@ -76,6 +71,19 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
         }
     }
     
+}
+
+#pragma mark - private methods
+-(void)setupConstraints
+{
+    [self.photoView autoRemoveConstraintsAffectingView];
+    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:DOPTL_PHOTOS_MARGIN_TOP];
+    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:DOPTL_PHOTOS_MARGIN_LEFT];
+    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:DOPTL_PHOTOS_MARGIN_RIGHT];
+    [self.photoView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0.0f];
+    //CGFloat width = [self contentView].bounds.size.width;
+    //[self.photoView autoSetDimension:ALDimensionHeight toSize:width * DOPTL_SINGLE_PHOTO_ASPECTRADIO ];
+    _didConstraintsUpdated = YES;
 }
 
 @end

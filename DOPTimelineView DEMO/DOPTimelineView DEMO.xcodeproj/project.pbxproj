@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		426006827CCA4BB2B87B6D5E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD316B93F344DD4981253E5 /* libPods.a */; };
 		8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CC18EA582600059303 /* Foundation.framework */; };
 		8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5CE18EA582600059303 /* CoreGraphics.framework */; };
 		8504D5D118EA582600059303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8504D5D018EA582600059303 /* UIKit.framework */; };
@@ -39,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1DD316B93F344DD4981253E5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4429974793274DB0AEE6B74C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8504D5C918EA582600059303 /* DOPTimelineView DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOPTimelineView DEMO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504D5CC18EA582600059303 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +78,6 @@
 				8504D5CF18EA582600059303 /* CoreGraphics.framework in Frameworks */,
 				8504D5D118EA582600059303 /* UIKit.framework in Frameworks */,
 				8504D5CD18EA582600059303 /* Foundation.framework in Frameworks */,
-				426006827CCA4BB2B87B6D5E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +122,6 @@
 				8504D5CE18EA582600059303 /* CoreGraphics.framework */,
 				8504D5D018EA582600059303 /* UIKit.framework */,
 				8504D5E518EA582600059303 /* XCTest.framework */,
-				1DD316B93F344DD4981253E5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +223,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "DODOPIPE LIMITED";
 				TargetAttributes = {
+					8504D5C818EA582600059303 = {
+						DevelopmentTeam = YFGML4FW29;
+					};
 					8504D5E318EA582600059303 = {
 						TestTargetID = 8504D5C818EA582600059303;
 					};
@@ -449,6 +448,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DOPTimelineView DEMO/DOPTimelineView DEMO-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -465,6 +466,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -475,6 +477,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DOPTimelineView DEMO/DOPTimelineView DEMO-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -491,6 +495,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

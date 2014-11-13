@@ -40,6 +40,7 @@
         [self.contentView addSubview:self.userName];
         [self.contentView addSubview:self.separator];
         [self.contentView addSubview:self.commentLabel];
+        [self setupConstraints];
         
     }
     return self;
@@ -50,6 +51,20 @@
     [super updateConstraints];
     if (self.didConstraintsUpdated) return;
     
+    [self setupConstraints];
+
+}
+
+- (void) setComment:(DOPComment *)comment
+{
+    self.userName.text = comment.userName;
+    self.commentLabel.text = comment.commentText;
+}
+
+
+#pragma mark - private methods
+-(void)setupConstraints
+{
     [self.userName autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:DOPTL_COMMENT_USERNAME_MARGIN_TOP];
     [self.userName autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:DOPTL_COMMENT_USERNAME_MARGIN_LEFT];
     
@@ -61,7 +76,7 @@
     [self.separator autoSetDimension:ALDimensionWidth toSize:DOPTL_COMMENT_UNC_SPEPARATOR_WIDTH];
     [self.separator autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.userName];
     
-    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
+    [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
         [self.commentLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
     }];
     
@@ -70,12 +85,6 @@
     [self.commentLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.userName];
     
     self.didConstraintsUpdated = YES;
-}
-
-- (void) setComment:(DOPComment *)comment
-{
-    self.userName.text = comment.userName;
-    self.commentLabel.text = comment.commentText;
 }
 
 @end

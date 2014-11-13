@@ -44,4 +44,18 @@
     return [formatter stringFromDate:self.timestamp];
 }
 
+- (id) copyWithZone:(NSZone *) zone
+{
+    DOPost *post = [[DOPost alloc] initWithUserName:[_userName copyWithZone:zone]
+                                          avatarUrl:[_avatarUrl absoluteString]
+                                          timestamp:_timestamp
+                                             photos:[_photos copyWithZone:zone]
+                                            caption:[_caption copyWithZone:zone]
+                                         numLikedBy:_numLikedBy
+                                            likedBy:[_likedBy copyWithZone:zone]
+                                     numCommentedBy:_numCommentedBy
+                                           comments:[_comments copyWithZone:zone]];
+    return post;
+}
+
 @end

@@ -52,6 +52,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
                                                      name:UIApplicationDidChangeStatusBarFrameNotification
                                                    object:Nil];
         
+        [self setupConstraints];
         
         
     }
@@ -72,30 +73,8 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
     [super updateConstraints];
     if (self.didConstraintsUpdated) return;
     
-    CGFloat cellWidth = [DOPApplicationUtils currentScreenDependsOrientation].size.width ;
-    CGFloat photoWidth = (cellWidth - ( DOPTL_PHOTOS_GRID_COLUMN_NUM - 1 ) * DOPTL_PHOTOS_GRID_PADDING ) / DOPTL_PHOTOS_GRID_COLUMN_NUM;
-    NSInteger cnt = DOPTL_PHOTOS_GRID_COLUMN_NUM * DOPTL_PHOTOS_GRID_ROW_NUM;
-    for ( NSInteger i=0; i<cnt; i++) {
-        NSInteger row = i  / DOPTL_PHOTOS_GRID_COLUMN_NUM ;
-        NSInteger column = i % DOPTL_PHOTOS_GRID_COLUMN_NUM;
-        CGRect frame = CGRectMake(column * ( photoWidth + DOPTL_PHOTOS_GRID_PADDING),
-                                  row * (photoWidth + DOPTL_PHOTOS_GRID_PADDING),
-                                  photoWidth, photoWidth);
-        UIImageView *imageView = [self.photoViews objectAtIndex:i];
-        [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-            [imageView autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
-        }];
-        [imageView autoRemoveConstraintsAffectingViewAndSubviews];
-        [imageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:frame.origin.y];
-        [imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:frame.origin.x];
-        
-        [imageView autoSetDimension:ALDimensionWidth toSize:frame.size.width];
-        [imageView autoSetDimension:ALDimensionHeight toSize:frame.size.height];
-    }
-    
-    self.didConstraintsUpdated = YES;
-    
-    
+
+    [self setupConstraints];
     
 }
 
@@ -115,7 +94,7 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 {
     self.didConstraintsUpdated = NO;
     [self setNeedsUpdateConstraints];
-    [self updateConstraintsIfNeeded];
+    [self setNeedsLayout];
     
 }
 
@@ -143,6 +122,34 @@ static NSString *const PHOTO_PLACEHOLDER = @"photo_placeholder";
 - (NSInteger) photoCount
 {
     return MIN([self.photos count], [self.photoViews count]);
+}
+
+#pragma mark - private methods
+
+-(void)setupConstraints
+{
+    CGFloat cellWidth = [DOPApplicationUtils currentScreenDependsOrientation].size.width ;
+    CGFloat photoWidth = (cellWidth - ( DOPTL_PHOTOS_GRID_COLUMN_NUM - 1 ) * DOPTL_PHOTOS_GRID_PADDING ) / DOPTL_PHOTOS_GRID_COLUMN_NUM;
+    NSInteger cnt = DOPTL_PHOTOS_GRID_COLUMN_NUM * DOPTL_PHOTOS_GRID_ROW_NUM;
+    for ( NSInteger i=0; i<cnt; i++) {
+        NSInteger row = i  / DOPTL_PHOTOS_GRID_COLUMN_NUM ;
+        NSInteger column = i % DOPTL_PHOTOS_GRID_COLUMN_NUM;
+        CGRect frame = CGRectMake(column * ( photoWidth + DOPTL_PHOTOS_GRID_PADDING),
+                                  row * (photoWidth + DOPTL_PHOTOS_GRID_PADDING),
+                                  photoWidth, photoWidth);
+        UIImageView *imageView = [self.photoViews objectAtIndex:i];
+        [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
+            [imageView autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
+        }];
+        [imageView autoRemoveConstraintsAffectingViewAndSubviews];
+        [imageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:frame.origin.y];
+        [imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:frame.origin.x];
+        
+        [imageView autoSetDimension:ALDimensionWidth toSize:frame.size.width];
+        [imageView autoSetDimension:ALDimensionHeight toSize:frame.size.height];
+    }
+    
+    self.didConstraintsUpdated = YES;
 }
 
 @end
